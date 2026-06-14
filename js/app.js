@@ -131,6 +131,23 @@ function toggleSupervisorNavDropdown(event) {
   }
 }
 
+function toggleProjectNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('project-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-project');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -147,7 +164,7 @@ function navigate(module) {
         parentSubMenu.style.display = 'flex';
         const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
         if (wrapper) {
-          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor');
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor, .nav-dropdown-toggle-project');
           const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
           if (toggle && chevron) {
             chevron.style.transform = 'rotate(180deg)';
@@ -180,7 +197,9 @@ function navigate(module) {
     'supervisor-monthly': 'Supervisor Monthly',
     'supervisor-payroll-sheet': 'Supervisor Payroll Sheet',
     'supervisor-payroll-columns': 'Supervisor Payroll Columns',
-    'supervisor-credit-rules': 'Supervisor Credit Rules'
+    'supervisor-credit-rules': 'Supervisor Credit Rules',
+    projects: 'Project Management',
+    clients: 'Client Management'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -223,7 +242,9 @@ function navigate(module) {
     'supervisor-monthly': renderSupervisorMonthly,
     'supervisor-payroll-sheet': renderSupervisorPayrollSheet,
     'supervisor-payroll-columns': renderSupervisorPayrollColumns,
-    'supervisor-credit-rules': renderSupervisorCreditRules
+    'supervisor-credit-rules': renderSupervisorCreditRules,
+    projects: renderProjects,
+    clients: renderClients
   };
 
   if (renderers[module]) renderers[module](content);

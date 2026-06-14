@@ -114,6 +114,23 @@ function toggleAttendanceNavDropdown(event) {
   }
 }
 
+function toggleSupervisorNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('supervisor-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-supervisor');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -130,7 +147,7 @@ function navigate(module) {
         parentSubMenu.style.display = 'flex';
         const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
         if (wrapper) {
-          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance');
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor');
           const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
           if (toggle && chevron) {
             chevron.style.transform = 'rotate(180deg)';
@@ -158,7 +175,12 @@ function navigate(module) {
     'face-profiles': 'Face Profiles', 'location-logs': 'Location Logs',
     'logout-requests': 'Logout Requests',
     'attendance-logs': 'Attendance Logs', 'attendance-report': 'Attendance Report',
-    'daily-credit-summary': 'Daily Credit Summary'
+    'daily-credit-summary': 'Daily Credit Summary',
+    'supervisor-daily': 'Supervisor Daily',
+    'supervisor-monthly': 'Supervisor Monthly',
+    'supervisor-payroll-sheet': 'Supervisor Payroll Sheet',
+    'supervisor-payroll-columns': 'Supervisor Payroll Columns',
+    'supervisor-credit-rules': 'Supervisor Credit Rules'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -196,7 +218,12 @@ function navigate(module) {
     'logout-requests': renderLogoutRequests,
     'attendance-logs': renderAttendanceLogs,
     'attendance-report': renderAttendanceReport,
-    'daily-credit-summary': renderDailyCreditSummary
+    'daily-credit-summary': renderDailyCreditSummary,
+    'supervisor-daily': renderSupervisorDaily,
+    'supervisor-monthly': renderSupervisorMonthly,
+    'supervisor-payroll-sheet': renderSupervisorPayrollSheet,
+    'supervisor-payroll-columns': renderSupervisorPayrollColumns,
+    'supervisor-credit-rules': renderSupervisorCreditRules
   };
 
   if (renderers[module]) renderers[module](content);

@@ -1245,12 +1245,13 @@ img { max-width: 100%; }
 
 /* ── Sidebar brand gradient ── */
 .sidebar {
-  background: linear-gradient(180deg, #0F2D6B 0%, #0D2460 55%, #0B1E52 100%) !important;
+  background: #f8fafc !important; /* light slate background */
+  border-right: 1px solid #e2e8f0 !important;
 }
 
 /* Sidebar top border accent */
 .sidebar-brand {
-  border-bottom: 1px solid rgba(249,115,22,.2) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
   padding: 18px 16px !important;
 }
 
@@ -1261,28 +1262,115 @@ img { max-width: 100%; }
   letter-spacing: -0.3px;
 }
 
+/* Company Selector light styles */
+.sidebar-company-selector {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+.company-select-btn {
+  background: #f1f5f9 !important;
+}
+.company-select-btn:hover {
+  background: #e2e8f0 !important;
+}
+.company-name {
+  color: #0f172a !important;
+}
+.company-plan {
+  color: #64748b !important;
+}
+.company-select-btn > svg {
+  color: #64748b !important;
+}
+.company-dropdown {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+.company-option {
+  color: #334155 !important;
+}
+.company-option:hover {
+  background: #f1f5f9 !important;
+}
+.company-option.active {
+  color: #2563eb !important;
+}
+.company-add {
+  border-top: 1px solid #e2e8f0 !important;
+  color: #2563eb !important;
+}
+.company-add:hover {
+  background: #eff6ff !important;
+}
+
+/* ── Nav items and section labels ── */
+.nav-section-label {
+  color: #64748b !important;
+}
+.nav-item {
+  color: #475569 !important;
+}
+.nav-item:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+.nav-item svg {
+  color: #64748b !important;
+}
+.nav-item:hover svg {
+  color: #0f172a !important;
+}
+
 /* ── Nav active uses orange accent ── */
 .nav-item.active {
-  background: rgba(37,99,235,0.2) !important;
-  color: #93C5FD !important;
+  background: #eff6ff !important;
+  color: #1e40af !important;
   border-left: 3px solid var(--brand-orange) !important;
   margin-left: 5px !important;
+  font-weight: 600 !important;
 }
 .nav-item.active svg { color: var(--brand-orange) !important; }
 
-/* ── Orange nav badges ── */
-.nav-badge { background: rgba(249,115,22,.18); color: #FDBA74 !important; }
-.nav-badge.warning { background: rgba(249,115,22,.25); color: #FDBA74 !important; }
-.nav-badge.success { background: rgba(16,185,129,.2); color: #6EE7B7 !important; }
+/* ── Light nav badges ── */
+.nav-badge { background: #dbeafe !important; color: #1e40af !important; }
+.nav-badge.warning { background: #fef3c7 !important; color: #92400e !important; }
+.nav-badge.success { background: #d1fae5 !important; color: #065f46 !important; }
 
 /* ── Sidebar company avatar orange ── */
 .company-avatar { background: var(--brand-orange) !important; }
 
-/* ── Sidebar section labels ── */
-.nav-section-label { color: rgba(249,115,22,.6) !important; }
-
 /* ── Sidebar user status ── */
-.sidebar-user { border-top: 1px solid rgba(249,115,22,.12) !important; }
+.sidebar-user {
+  border-top: 1px solid #e2e8f0 !important;
+}
+.user-name {
+  color: #0f172a !important;
+}
+.user-role {
+  color: #64748b !important;
+}
+.logout-btn {
+  color: #64748b !important;
+}
+.logout-btn:hover {
+  color: #ef4444 !important;
+  background: #fef2f2 !important;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1 !important;
+  border-radius: 3px !important;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8 !important;
+}
 
 /* ── Topbar ── */
 .topbar {

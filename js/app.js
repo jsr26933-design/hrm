@@ -80,6 +80,23 @@ function toggleUserNavDropdown(event) {
   }
 }
 
+function toggleEmployeeNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('employee-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-employee');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -96,7 +113,7 @@ function navigate(module) {
         parentSubMenu.style.display = 'flex';
         const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
         if (wrapper) {
-          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user');
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee');
           const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
           if (toggle && chevron) {
             chevron.style.transform = 'rotate(180deg)';
@@ -120,7 +137,9 @@ function navigate(module) {
     assets: 'Asset Management', helpdesk: 'Help Desk & Announcements',
     company: 'Company Profile', branch: 'Branch Management',
     department: 'Department Management', 'machine-master': 'Machine Master',
-    post: 'Designation & Post', users: 'User Account Management'
+    post: 'Designation & Post', users: 'User Account Management',
+    'face-profiles': 'Face Profiles', 'location-logs': 'Location Logs',
+    'logout-requests': 'Logout Requests'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -152,7 +171,10 @@ function navigate(module) {
     department: renderDepartment,
     'machine-master': renderMachineMaster,
     post: renderPost,
-    users: renderUsers
+    users: renderUsers,
+    'face-profiles': renderFaceProfiles,
+    'location-logs': renderLocationLogs,
+    'logout-requests': renderLogoutRequests
   };
 
   if (renderers[module]) renderers[module](content);

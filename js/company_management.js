@@ -559,6 +559,257 @@ function renderUsers(container) {
         </tbody>
       </table>
     </div>
+}
+
+// 7. Employee Management / Face Profiles Renderer
+function renderFaceProfiles(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Face Profiles</h1>
+        <p>Manage employee facial biometric enrollment, update face scans, and review verification logs.</p>
+      </div>
+      <div class="page-header-right">
+        <button class="btn btn-primary" onclick="showToast('Enroll Face Profile feature coming soon!')">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Enroll Face Profile
+        </button>
+      </div>
+    </div>
+
+    <!-- KPI summary row -->
+    <div class="grid grid-3" style="margin-bottom:24px">
+      <div class="stat-card-blue">
+        <div class="grad-stat-icon">👤</div>
+        <div class="grad-stat-label">Enrolled Profiles</div>
+        <div class="grad-stat-value">241 Employees</div>
+        <div class="grad-stat-badge">High-fidelity 3D scans</div>
+      </div>
+      <div class="stat-card-green">
+        <div class="grad-stat-icon">🎯</div>
+        <div class="grad-stat-label">Match Accuracy</div>
+        <div class="grad-stat-value">99.8% Success</div>
+        <div class="grad-stat-badge">FRR < 0.01% standard</div>
+      </div>
+      <div class="stat-card-orange">
+        <div class="grad-stat-icon">⚠️</div>
+        <div class="grad-stat-label">Pending Setup</div>
+        <div class="grad-stat-value">7 Staff Members</div>
+        <div class="grad-stat-badge">Hiring onboarding list</div>
+      </div>
+    </div>
+
+    <!-- Face Profiles List Table -->
+    <div class="table-container">
+      <table class="data-table table-modern">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Branch Location</th>
+            <th>Enrollment Quality</th>
+            <th>Last Updated</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Arjun Kumar</strong></td>
+            <td>Mumbai HO</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">High Quality</span></td>
+            <td>14 Jun 2026, 17:45</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Enrolled</span></td>
+          </tr>
+          <tr>
+            <td><strong>Smriti Sharma</strong></td>
+            <td>Mumbai HO</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">High Quality</span></td>
+            <td>13 Jun 2026, 16:30</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Enrolled</span></td>
+          </tr>
+          <tr>
+            <td><strong>Yogesh Kumar</strong></td>
+            <td>Pune Office</td>
+            <td><span class="badge badge-info" style="background: rgba(37,99,235,0.1); color: #2563eb; padding: 2px 8px; border-radius: 4px; font-size:11px;">Medium Quality</span></td>
+            <td>12 Jun 2026, 15:10</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Enrolled</span></td>
+          </tr>
+          <tr>
+            <td><strong>Rupali Das</strong></td>
+            <td>Pune Office</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">High Quality</span></td>
+            <td>11 Jun 2026, 11:20</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Enrolled</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   `;
 }
+
+// 8. Employee Management / Location Logs Renderer
+function renderLocationLogs(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Location Logs</h1>
+        <p>View real-time GPS coordinates, check geofence statuses, and audit route history.</p>
+      </div>
+      <div class="page-header-right">
+        <button class="btn btn-secondary" onclick="showToast('Exporting location logs...')">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export CSV
+        </button>
+      </div>
+    </div>
+
+    <!-- KPI summary row -->
+    <div class="grid grid-3" style="margin-bottom:24px">
+      <div class="stat-card-blue">
+        <div class="grad-stat-icon">📍</div>
+        <div class="grad-stat-label">Active Field Staff</div>
+        <div class="grad-stat-value">98 Staff Members</div>
+        <div class="grad-stat-badge">GPS tracking enabled</div>
+      </div>
+      <div class="stat-card-green">
+        <div class="grad-stat-icon">🛡️</div>
+        <div class="grad-stat-label">Geofence Violations</div>
+        <div class="grad-stat-value">0 Violations</div>
+        <div class="grad-stat-badge">All check-ins in bounds</div>
+      </div>
+      <div class="stat-card-orange">
+        <div class="grad-stat-icon">🔄</div>
+        <div class="grad-stat-label">Total Syncs Today</div>
+        <div class="grad-stat-value">1,840 Points</div>
+        <div class="grad-stat-badge">Real-time sync running</div>
+      </div>
+    </div>
+
+    <!-- Location Logs List Table -->
+    <div class="table-container">
+      <table class="data-table table-modern">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Branch / Zone</th>
+            <th>Activity Event</th>
+            <th>Location Address</th>
+            <th>Logged Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Arjun Kumar</strong></td>
+            <td>Mumbai HO</td>
+            <td>Check-in</td>
+            <td>Nariman Point, Mumbai, MH</td>
+            <td>17:45</td>
+          </tr>
+          <tr>
+            <td><strong>Amit Singh</strong></td>
+            <td>Pune Office</td>
+            <td>Check-in</td>
+            <td>Kalyani Nagar, Pune, MH</td>
+            <td>16:30</td>
+          </tr>
+          <tr>
+            <td><strong>Smriti Sharma</strong></td>
+            <td>Mumbai HO</td>
+            <td>Check-out</td>
+            <td>Nariman Point, Mumbai, MH</td>
+            <td>15:10</td>
+          </tr>
+          <tr>
+            <td><strong>Rahul Verma</strong></td>
+            <td>Delhi Branch</td>
+            <td>Check-in</td>
+            <td>Sector 62, Noida, UP</td>
+            <td>14:05</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+// 9. Employee Management / Logout Requests Renderer
+function renderLogoutRequests(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Device Logout Requests</h1>
+        <p>Manage requests from employees to reset mobile logins, register new devices, or log out remotely.</p>
+      </div>
+    </div>
+
+    <!-- KPI summary row -->
+    <div class="grid grid-3" style="margin-bottom:24px">
+      <div class="stat-card-blue">
+        <div class="grad-stat-icon">⚠️</div>
+        <div class="grad-stat-label">Pending Requests</div>
+        <div class="grad-stat-value">3 Requests</div>
+        <div class="grad-stat-badge">Awaiting approval</div>
+      </div>
+      <div class="stat-card-green">
+        <div class="grad-stat-icon">✅</div>
+        <div class="grad-stat-label">Approved Today</div>
+        <div class="grad-stat-value">12 Requests</div>
+        <div class="grad-stat-badge">Auto-reset successfully</div>
+      </div>
+      <div class="stat-card-orange">
+        <div class="grad-stat-icon">❌</div>
+        <div class="grad-stat-label">Rejected Today</div>
+        <div class="grad-stat-value">1 Request</div>
+        <div class="grad-stat-badge">Flagged for security</div>
+      </div>
+    </div>
+
+    <!-- Logout Requests List Table -->
+    <div class="table-container">
+      <table class="data-table table-modern">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Device Model</th>
+            <th>Request Details</th>
+            <th>Submission Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Arjun Kumar</strong></td>
+            <td>personal-iphone</td>
+            <td>Registering a new device (Login reset)</td>
+            <td>14 Jun 2026, 17:45</td>
+            <td>
+              <button class="btn btn-secondary btn-sm" style="padding:4px 8px; font-size:11px;" onclick="showToast('Request Approved')">Approve</button>
+              <button class="btn btn-danger btn-sm" style="padding:4px 8px; font-size:11px; background:#ef4444; color:white; border:none;" onclick="showToast('Request Rejected')">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Amit Singh</strong></td>
+            <td>office-android</td>
+            <td>Device factory reset completed</td>
+            <td>14 Jun 2026, 16:30</td>
+            <td>
+              <button class="btn btn-secondary btn-sm" style="padding:4px 8px; font-size:11px;" onclick="showToast('Request Approved')">Approve</button>
+              <button class="btn btn-danger btn-sm" style="padding:4px 8px; font-size:11px; background:#ef4444; color:white; border:none;" onclick="showToast('Request Rejected')">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Rahul Verma</strong></td>
+            <td>personal-samsung</td>
+            <td>Lost primary phone (Full reset requested)</td>
+            <td>14 Jun 2026, 15:10</td>
+            <td>
+              <button class="btn btn-secondary btn-sm" style="padding:4px 8px; font-size:11px;" onclick="showToast('Request Approved')">Approve</button>
+              <button class="btn btn-danger btn-sm" style="padding:4px 8px; font-size:11px; background:#ef4444; color:white; border:none;" onclick="showToast('Request Rejected')">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 

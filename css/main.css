@@ -1411,6 +1411,14 @@ img { max-width: 100%; }
   color: #15803d !important;
 }
 
+/* Employee Management specific green theme styling */
+.nav-dropdown-toggle-employee {
+  color: #16a34a !important; /* Green text */
+}
+.nav-dropdown-toggle-employee svg {
+  color: #16a34a !important; /* Green icon */
+}
+
 /* Custom scrollbar for sidebar */
 .sidebar::-webkit-scrollbar {
   width: 6px;

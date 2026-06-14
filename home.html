@@ -1,0 +1,984 @@
+?<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WorkPilot HRM — Smart HRM. Simplified Workforce Management.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/home.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="home.html" class="nav-logo">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="9" fill="#2563EB"/>
+        <path d="M10 28V16l10-6 10 6v12l-10 6-10-6z" fill="white" opacity="0.9"/>
+        <path d="M20 10l10 6-10 6-10-6 10-6z" fill="white"/>
+        <circle cx="20" cy="22" r="3" fill="#F97316"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-main">WorkPilot <b>HRM</b></span>
+      </div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-login">Login</a>
+      <a href="index.html" class="nav-trial">Start Free Trial</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <a href="#modules" onclick="toggleNav()">Modules</a>
+    <a href="#why" onclick="toggleNav()">Why Us</a>
+    <a href="#dashboard" onclick="toggleNav()">Dashboard</a>
+    <a href="#pricing" onclick="toggleNav()">Pricing</a>
+    <a href="index.html" onclick="toggleNav()">Login</a>
+    <a href="index.html" class="nav-trial" style="text-align:center;margin-top:8px" onclick="toggleNav()">Start Free Trial →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section class="hero-section" id="hero">
+  <!-- Background mesh -->
+  <div class="hero-mesh"></div>
+  <div class="hero-dots"></div>
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <!-- LEFT -->
+      <div class="hero-left">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          Trusted by 500+ businesses across India
+        </div>
+        <h1 class="hero-h1">
+          Smart HRM.<br/>
+          <span class="h1-blue">Simplified</span><br/>
+          <span class="h1-gradient">Workforce Management.</span>
+        </h1>
+        <p class="hero-p">
+          Manage Employees, Attendance, Payroll, Leave, Tasks &amp;
+          Workforce Tracking from one powerful cloud platform built for
+          modern Indian businesses.
+        </p>
+        <!-- Feature chips -->
+        <div class="hero-chips">
+          <span class="chip"><svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> GPS Attendance</span>
+          <span class="chip"><svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Payroll Automation</span>
+          <span class="chip"><svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Employee Self-Service</span>
+          <span class="chip"><svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Live Tracking</span>
+          <span class="chip"><svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Leave Management</span>
+          <span class="chip"><svg width="14" height="14" fill="none" stroke="#10B981" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Reports &amp; Analytics</span>
+        </div>
+        <!-- CTA -->
+        <div class="hero-btns">
+          <a href="index.html" class="btn-demo">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Free Demo
+          </a>
+          <a href="index.html" class="btn-trial">
+            Start Free Trial
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <p class="hero-note">No credit card required &nbsp;·&nbsp; 14-day free trial &nbsp;·&nbsp; Setup in 30 minutes</p>
+      </div>
+
+      <!-- RIGHT: Dashboard mockup -->
+      <div class="hero-right">
+        <div class="hero-screen">
+          <div class="screen-bar">
+            <div class="sbar-dots"><span></span><span></span><span></span></div>
+            <div class="sbar-addr">
+              <svg width="11" height="11" fill="none" stroke="#64748B" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              app.workpilot.hr
+            </div>
+          </div>
+          <img src="assets/images/hero-dashboard.svg" alt="WorkPilot HRM Dashboard" class="screen-img"/>
+        </div>
+        <!-- Floating cards -->
+        <div class="fcard top-right">
+          <div class="fcard-icon green">✅</div>
+          <div>
+            <div class="fcard-val">214 Present</div>
+            <div class="fcard-sub">86.3% attendance today</div>
+          </div>
+        </div>
+        <div class="fcard bottom-left">
+          <div class="fcard-icon blue">💰</div>
+          <div>
+            <div class="fcard-val">₹28.4L</div>
+            <div class="fcard-sub">Payroll processed</div>
+          </div>
+        </div>
+        <div class="fcard bottom-right">
+          <div class="fcard-icon orange">📍</div>
+          <div>
+            <div class="fcard-val">5 Live GPS</div>
+            <div class="fcard-sub">Field employees tracked</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TRUSTED BY STATS BAR
+════════════════════════════════════════════════════════════ -->
+<section class="stats-bar">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span>
+        <span class="stat-lbl">Businesses</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="10000">0</span><span class="stat-plus">+</span>
+        <span class="stat-lbl">Employees Managed</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="99">0</span><span class="stat-plus">.9%</span>
+        <span class="stat-lbl">Uptime</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="24">0</span><span class="stat-plus">×7</span>
+        <span class="stat-lbl">Support</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="18">0</span><span class="stat-plus">+</span>
+        <span class="stat-lbl">Core Modules</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num">4.9</span><span class="stat-plus">★</span>
+        <span class="stat-lbl">Customer Rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TRUSTED COMPANIES TICKER
+════════════════════════════════════════════════════════════ -->
+<section class="companies-bar">
+  <div class="wrap">
+    <p class="companies-label">Trusted by leading companies across industries</p>
+    <div class="ticker-outer">
+      <div class="ticker-inner">
+        <span class="company-chip">🏢 TechCorp India</span>
+        <span class="company-chip">🛒 RetailMart</span>
+        <span class="company-chip">🚚 LogiFreight</span>
+        <span class="company-chip">🏭 ManufacturePro</span>
+        <span class="company-chip">🏗️ BuildRight</span>
+        <span class="company-chip">🏥 HealthFirst</span>
+        <span class="company-chip">⚡ QuickServe</span>
+        <span class="company-chip">🌱 GrowFast</span>
+        <span class="company-chip">📦 StorageHub</span>
+        <span class="company-chip">🎓 EduTech</span>
+        <!-- duplicate for infinite loop -->
+        <span class="company-chip">🏢 TechCorp India</span>
+        <span class="company-chip">🛒 RetailMart</span>
+        <span class="company-chip">🚚 LogiFreight</span>
+        <span class="company-chip">🏭 ManufacturePro</span>
+        <span class="company-chip">🏗️ BuildRight</span>
+        <span class="company-chip">🏥 HealthFirst</span>
+        <span class="company-chip">⚡ QuickServe</span>
+        <span class="company-chip">🌱 GrowFast</span>
+        <span class="company-chip">📦 StorageHub</span>
+        <span class="company-chip">🎓 EduTech</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CORE MODULES
+════════════════════════════════════════════════════════════ -->
+<section class="modules-section" id="modules">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-tag">📦 18 Core Modules</div>
+      <h2 class="sec-title">Everything HRM in <span class="blue-text">One Platform</span></h2>
+      <p class="sec-sub">From hire to retire — every step of your workforce lifecycle, automated and managed in one place.</p>
+    </div>
+    <div class="modules-grid">
+
+      <div class="mod-card" data-delay="0">
+        <div class="mod-icon" style="background:#EFF6FF">👥</div>
+        <h3>Employee Management</h3>
+        <p>Manage employee records, departments, documents, and organizational structure with complete digital profiles.</p>
+        <ul class="mod-list">
+          <li>Digital employee profiles</li>
+          <li>Department & org chart</li>
+          <li>Document management</li>
+          <li>Bulk import / export</li>
+        </ul>
+        <a href="index.html" class="mod-link">Explore →</a>
+      </div>
+
+      <div class="mod-card" data-delay="80">
+        <div class="mod-icon" style="background:#ECFDF5">✅</div>
+        <h3>Attendance Management</h3>
+        <p>GPS Attendance, Selfie Verification, Biometric sync, Shift Management, and detailed Attendance Reports.</p>
+        <ul class="mod-list">
+          <li>GPS &amp; selfie attendance</li>
+          <li>Biometric integration</li>
+          <li>Shift scheduling</li>
+          <li>Late &amp; OT tracking</li>
+        </ul>
+        <a href="index.html" class="mod-link">Explore →</a>
+      </div>
+
+      <div class="mod-card featured" data-delay="160">
+        <div class="mod-icon" style="background:rgba(255,255,255,0.15)">💰</div>
+        <h3>Payroll Management</h3>
+        <p>Automated salary processing with PF, ESI, TDS, and all statutory deductions. One-click payslip generation.</p>
+        <ul class="mod-list">
+          <li>Auto PF / ESI / TDS</li>
+          <li>Payslip generation</li>
+          <li>Bank transfer integration</li>
+          <li>Form 16 &amp; compliance</li>
+        </ul>
+        <a href="index.html" class="mod-link featured-link">Explore →</a>
+      </div>
+
+      <div class="mod-card" data-delay="240">
+        <div class="mod-icon" style="background:#FFF7ED">📅</div>
+        <h3>Leave Management</h3>
+        <p>Leave Requests, Multi-level Approvals, Holiday Calendars, Carry-forward Rules, and Real-time Leave Balances.</p>
+        <ul class="mod-list">
+          <li>Multi-type leave policies</li>
+          <li>WhatsApp approvals</li>
+          <li>Leave calendar</li>
+          <li>Carry-forward &amp; encash</li>
+        </ul>
+        <a href="index.html" class="mod-link">Explore →</a>
+      </div>
+
+      <div class="mod-card" data-delay="320">
+        <div class="mod-icon" style="background:#F3E8FF">📋</div>
+        <h3>Task Management</h3>
+        <p>Assign, Track, and Monitor employee tasks. Kanban board, priority management, and productivity analytics.</p>
+        <ul class="mod-list">
+          <li>Kanban board</li>
+          <li>Priority tracking</li>
+          <li>Progress updates</li>
+          <li>Team productivity</li>
+        </ul>
+        <a href="index.html" class="mod-link">Explore →</a>
+      </div>
+
+      <div class="mod-card" data-delay="400">
+        <div class="mod-icon" style="background:#FEF2F2">📍</div>
+        <h3>Workforce Tracking</h3>
+        <p>Live GPS tracking, Route History, Geo-fence Alerts, and complete Field Employee Monitoring on a live map.</p>
+        <ul class="mod-list">
+          <li>Live GPS map</li>
+          <li>Route history</li>
+          <li>Geo-fence zones</li>
+          <li>Field visit verification</li>
+        </ul>
+        <a href="index.html" class="mod-link">Explore →</a>
+      </div>
+
+    </div>
+    <div class="modules-more">
+      <p>+ 12 more modules: Recruitment, Appraisal, Asset Management, HRM Calendar, Help Desk, Reports, Self-Service, RBAC, and more.</p>
+      <a href="index.html" class="btn-outline-dark">Explore All 18 Modules →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY WORKPILOT HRM
+════════════════════════════════════════════════════════════ -->
+<section class="why-section" id="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <!-- Left: Image / Visual -->
+      <div class="why-visual">
+        <div class="why-img-wrap">
+          <img src="assets/images/attendance-screen.svg" alt="WorkPilot HRM Attendance" class="why-img"/>
+          <!-- Overlay stats -->
+          <div class="why-stat-card wsc-1">
+            <div class="wsc-emoji">⚡</div>
+            <div>
+              <div class="wsc-val">80%</div>
+              <div class="wsc-lbl">Less Manual Work</div>
+            </div>
+          </div>
+          <div class="why-stat-card wsc-2">
+            <div class="wsc-emoji">💯</div>
+            <div>
+              <div class="wsc-val">100%</div>
+              <div class="wsc-lbl">Payroll Accuracy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Points -->
+      <div class="why-text">
+        <div class="sec-tag">🏆 Why WorkPilot HRM</div>
+        <h2 class="sec-title" style="text-align:left;margin:14px 0 16px">The Smarter Way to<br/><span class="blue-text">Manage Your Workforce</span></h2>
+        <p class="sec-sub" style="text-align:left;margin:0 0 32px">Built specifically for Indian businesses — compliant, affordable, and powerful enough for enterprises.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Reduce Manual HRM Work by 80%</div>
+              <div class="wi-desc">Automate attendance, payroll, and approvals — no more spreadsheets.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Accurate Payroll Processing</div>
+              <div class="wi-desc">Zero errors — PF, ESI, TDS auto-calculated with every payroll run.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Real-Time Attendance Monitoring</div>
+              <div class="wi-desc">Live GPS tracking, selfie verification, and geo-fence alerts.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Secure Cloud Platform</div>
+              <div class="wi-desc">AES-256 encryption, ISO 27001 compliant, 99.9% uptime SLA.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Mobile Friendly</div>
+              <div class="wi-desc">Full-featured mobile app for employees and managers on the go.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Multi-Branch Support</div>
+              <div class="wi-desc">Manage multiple offices, companies, and locations from one account.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Role-Based Access Control</div>
+              <div class="wi-desc">Granular permissions — HRM, Manager, Employee, and custom roles.</div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="wi-check">✓</div>
+            <div>
+              <div class="wi-title">Easy Implementation</div>
+              <div class="wi-desc">Go live in 30 minutes with our guided setup wizard and free onboarding.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DASHBOARD SHOWCASE
+════════════════════════════════════════════════════════════ -->
+<section class="showcase-section" id="dashboard">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-tag">🖥️ Product Showcase</div>
+      <h2 class="sec-title">Everything You Need to <span class="blue-text">Manage Your Workforce</span></h2>
+      <p class="sec-sub">See WorkPilot HRM in action — beautiful dashboards designed for speed and clarity.</p>
+    </div>
+
+    <!-- Tab nav -->
+    <div class="showcase-tabs" id="showcase-tabs">
+      <button class="stab active" onclick="switchShowcase(this,'sc-hr')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        HRM Dashboard
+      </button>
+      <button class="stab" onclick="switchShowcase(this,'sc-attendance')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/></svg>
+        Attendance
+      </button>
+      <button class="stab" onclick="switchShowcase(this,'sc-payroll')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Payroll
+      </button>
+      <button class="stab" onclick="switchShowcase(this,'sc-gps')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        GPS Tracking
+      </button>
+      <button class="stab" onclick="switchShowcase(this,'sc-reports')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Reports
+      </button>
+    </div>
+
+    <!-- Showcase panels -->
+    <div class="showcase-panel active" id="sc-hr">
+      <div class="sc-layout">
+        <div class="sc-text">
+          <h3>HRM Dashboard</h3>
+          <p>A single command center for all your HRM operations. See attendance, payroll status, pending approvals, team activity, and KPIs — all in real time.</p>
+          <ul class="sc-features">
+            <li><span>📊</span> Real-time workforce KPIs</li>
+            <li><span>📅</span> Pending leave approvals</li>
+            <li><span>📈</span> 6-month trend charts</li>
+            <li><span>🔔</span> Live activity feed</li>
+          </ul>
+          <a href="index.html" class="btn-blue">View Live Demo →</a>
+        </div>
+        <div class="sc-img">
+          <div class="sc-mockup">
+            <div class="sc-chrome">
+              <div class="sc-dots"><span></span><span></span><span></span></div>
+              <span class="sc-url">Dashboard — WorkPilot HRM</span>
+            </div>
+            <img src="assets/images/hero-dashboard.svg" alt="HRM Dashboard"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-panel" id="sc-attendance">
+      <div class="sc-layout">
+        <div class="sc-text">
+          <h3>Attendance Dashboard</h3>
+          <p>Monitor daily attendance across your entire workforce. GPS-verified check-ins, biometric sync, late alerts, and detailed monthly calendar view.</p>
+          <ul class="sc-features">
+            <li><span>📍</span> GPS-verified check-in</li>
+            <li><span>📸</span> Selfie attendance</li>
+            <li><span>⏰</span> Late arrival alerts</li>
+            <li><span>📆</span> Monthly calendar view</li>
+          </ul>
+          <a href="index.html" class="btn-blue">View Live Demo →</a>
+        </div>
+        <div class="sc-img">
+          <div class="sc-mockup">
+            <div class="sc-chrome">
+              <div class="sc-dots"><span></span><span></span><span></span></div>
+              <span class="sc-url">Attendance — WorkPilot HRM</span>
+            </div>
+            <img src="assets/images/attendance-screen.svg" alt="Attendance Dashboard"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-panel" id="sc-payroll">
+      <div class="sc-layout">
+        <div class="sc-text">
+          <h3>Payroll Dashboard</h3>
+          <p>Process payroll for hundreds of employees in minutes. Auto-compute PF, ESI, TDS, and generate payslips with a single click.</p>
+          <ul class="sc-features">
+            <li><span>💰</span> Auto salary computation</li>
+            <li><span>📄</span> One-click payslips</li>
+            <li><span>🏦</span> Bank transfer integration</li>
+            <li><span>📋</span> Form 16 &amp; compliance</li>
+          </ul>
+          <a href="index.html" class="btn-blue">View Live Demo →</a>
+        </div>
+        <div class="sc-img">
+          <div class="sc-mockup">
+            <div class="sc-chrome">
+              <div class="sc-dots"><span></span><span></span><span></span></div>
+              <span class="sc-url">Payroll — WorkPilot HRM</span>
+            </div>
+            <img src="assets/images/payroll-screen.svg" alt="Payroll Dashboard"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-panel" id="sc-gps">
+      <div class="sc-layout">
+        <div class="sc-text">
+          <h3>GPS Tracking Dashboard</h3>
+          <p>See exactly where every field employee is, right now. Live map, geo-fence alerts, route history, and automatic location-based attendance.</p>
+          <ul class="sc-features">
+            <li><span>🗺️</span> Live employee map</li>
+            <li><span>🔒</span> Geo-fence zones</li>
+            <li><span>📡</span> Route history</li>
+            <li><span>📱</span> Offline-capable app</li>
+          </ul>
+          <a href="index.html" class="btn-blue">View Live Demo →</a>
+        </div>
+        <div class="sc-img">
+          <div class="sc-mockup">
+            <div class="sc-chrome">
+              <div class="sc-dots"><span></span><span></span><span></span></div>
+              <span class="sc-url">GPS Tracking — WorkPilot HRM</span>
+            </div>
+            <img src="assets/images/gps-screen.svg" alt="GPS Tracking"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-panel" id="sc-reports">
+      <div class="sc-layout">
+        <div class="sc-text">
+          <h3>Reports &amp; Analytics</h3>
+          <p>30+ built-in reports covering attendance, payroll, leaves, headcount, and compliance. Export to Excel, PDF, or connect via API.</p>
+          <ul class="sc-features">
+            <li><span>📊</span> 30+ report templates</li>
+            <li><span>📈</span> Custom dashboards</li>
+            <li><span>⬇️</span> Excel &amp; PDF export</li>
+            <li><span>🔌</span> API access</li>
+          </ul>
+          <a href="index.html" class="btn-blue">View Live Demo →</a>
+        </div>
+        <div class="sc-img">
+          <div class="sc-mockup">
+            <div class="sc-chrome">
+              <div class="sc-dots"><span></span><span></span><span></span></div>
+              <span class="sc-url">Reports — WorkPilot HRM</span>
+            </div>
+            <img src="assets/images/appraisal-screen.svg" alt="Reports"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     INDUSTRIES
+════════════════════════════════════════════════════════════ -->
+<section class="industries-section" id="industries">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-tag">🏭 Industries We Serve</div>
+      <h2 class="sec-title">Built for <span class="blue-text">Every Business</span></h2>
+      <p class="sec-sub">WorkPilot HRM is flexible enough for any industry — from factory floors to field sales teams.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="ind-card">
+        <div class="ind-icon">🏭</div>
+        <h4>Manufacturing</h4>
+        <p>Shift scheduling, factory floor attendance, OT tracking, and safety compliance management.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🛒</div>
+        <h4>Retail</h4>
+        <p>Multi-location staff management, part-time workforce, and store-wise payroll reports.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🚚</div>
+        <h4>Logistics</h4>
+        <p>Field force GPS tracking, delivery agent attendance, route logs, and live tracking.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏗️</div>
+        <h4>Construction</h4>
+        <p>Site worker attendance, daily wages, contractor management, and project-wise reports.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏥</div>
+        <h4>Healthcare</h4>
+        <p>Duty roster, nurse attendance, locum staff management, and compliance tracking.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🎓</div>
+        <h4>Education</h4>
+        <p>Teacher attendance, academic staff payroll, leave management, and HRM reports.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">💻</div>
+        <h4>Technology</h4>
+        <p>Remote teams, sprint-based appraisals, ESOP tracking, and flexible work policies.</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">⚡</div>
+        <h4>Service Industry</h4>
+        <p>Client site visits, field staff monitoring, project-based attendance, and billing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRICING
+════════════════════════════════════════════════════════════ -->
+<section class="pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-tag">💳 Simple Pricing</div>
+      <h2 class="sec-title">Plans that <span class="blue-text">Grow With You</span></h2>
+      <p class="sec-sub">Transparent pricing. No hidden fees. Start free, scale when ready.</p>
+    </div>
+
+    <!-- Toggle -->
+    <div class="price-toggle-wrap">
+      <span class="pt-label" id="pt-monthly" onclick="setPricing('monthly')">Monthly</span>
+      <div class="pt-switch" onclick="setPricing(document.getElementById('pt-monthly').classList.contains('active-pt')?'annual':'monthly')">
+        <div class="pt-knob" id="pt-knob"></div>
+      </div>
+      <span class="pt-label" id="pt-annual" onclick="setPricing('annual')">Annual <em class="save-tag">Save 20%</em></span>
+    </div>
+
+    <div class="price-grid">
+      <!-- Starter -->
+      <div class="price-card">
+        <div class="price-plan">Starter</div>
+        <div class="price-emoji">🌱</div>
+        <div class="price-sub">For small businesses up to 50 employees</div>
+        <div class="price-num">
+          <sup>₹</sup><span id="p-starter">6,000</span>
+          <sub id="ps-period">/year</sub>
+        </div>
+        <div class="price-note" id="pn-starter">Up to 15 employees included</div>
+        <div class="price-div"></div>
+        <ul class="price-feats">
+          <li><span class="pf-check">✓</span> Employee Management</li>
+          <li><span class="pf-check">✓</span> Attendance (Web + Mobile)</li>
+          <li><span class="pf-check">✓</span> Leave Management</li>
+          <li><span class="pf-check">✓</span> Basic Payroll</li>
+          <li><span class="pf-check">✓</span> Self-Service Portal</li>
+          <li><span class="pf-check">✓</span> Email Support</li>
+          <li><span class="pf-x">✗</span> GPS Attendance</li>
+          <li><span class="pf-x">✗</span> Appraisal Module</li>
+        </ul>
+        <a href="index.html" class="price-btn outline">Get Started</a>
+        <p class="price-trial">14-day free trial · No credit card</p>
+      </div>
+
+      <!-- Growth POPULAR -->
+      <div class="price-card popular">
+        <div class="pop-tag">⭐ Most Popular</div>
+        <div class="price-plan">Growth</div>
+        <div class="price-emoji">🚀</div>
+        <div class="price-sub">For growing teams of 50–500 employees</div>
+        <div class="price-num">
+          <sup>₹</sup><span id="p-growth">149</span>
+          <sub id="pg-period">/emp/mo</sub>
+        </div>
+        <div class="price-note" id="pn-growth">Minimum ₹4,999/month</div>
+        <div class="price-div"></div>
+        <ul class="price-feats">
+          <li><span class="pf-check">✓</span> Everything in Starter</li>
+          <li><span class="pf-check">✓</span> GPS &amp; Selfie Attendance</li>
+          <li><span class="pf-check">✓</span> Advanced Payroll + TDS</li>
+          <li><span class="pf-check">✓</span> Task Management</li>
+          <li><span class="pf-check">✓</span> Performance Appraisal</li>
+          <li><span class="pf-check">✓</span> Recruitment Module</li>
+          <li><span class="pf-check">✓</span> Priority Support (4hr)</li>
+          <li><span class="pf-check">✓</span> Up to 3 Companies</li>
+        </ul>
+        <a href="index.html" class="price-btn primary">Start Free Trial</a>
+        <p class="price-trial">14-day free trial · No credit card</p>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="price-card">
+        <div class="price-plan">Enterprise</div>
+        <div class="price-emoji">🏢</div>
+        <div class="price-sub">For large organizations 500+ employees</div>
+        <div class="price-num">
+          <sup>₹</sup><span id="p-ent">199</span>
+          <sub id="pe-period">/emp/mo</sub>
+        </div>
+        <div class="price-note" id="pn-ent">Custom pricing available</div>
+        <div class="price-div"></div>
+        <ul class="price-feats">
+          <li><span class="pf-check">✓</span> Everything in Growth</li>
+          <li><span class="pf-check">✓</span> Unlimited Companies</li>
+          <li><span class="pf-check">✓</span> Asset Management</li>
+          <li><span class="pf-check">✓</span> Help Desk Module</li>
+          <li><span class="pf-check">✓</span> REST API Access</li>
+          <li><span class="pf-check">✓</span> Dedicated Account Manager</li>
+          <li><span class="pf-check">✓</span> 99.9% SLA</li>
+          <li><span class="pf-check">✓</span> SSO + 2FA + Audit Logs</li>
+        </ul>
+        <a href="index.html" class="price-btn outline">Contact Sales</a>
+        <p class="price-trial">Custom demo &amp; pilot program</p>
+      </div>
+    </div>
+
+    <!-- Guarantee row -->
+    <div class="price-guarantee">
+      <div class="pg-item"><span>🔒</span><div><b>No lock-in</b><small>Cancel anytime</small></div></div>
+      <div class="pg-item"><span>🚀</span><div><b>Free onboarding</b><small>We set it up for you</small></div></div>
+      <div class="pg-item"><span>💳</span><div><b>No hidden fees</b><small>What you see is what you pay</small></div></div>
+      <div class="pg-item"><span>📦</span><div><b>Free migration</b><small>We import your existing data</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section class="testi-section" id="testimonials">
+  <div class="wrap">
+    <div class="sec-header">
+      <div class="sec-tag">💬 Customer Reviews</div>
+      <h2 class="sec-title">Loved by <span class="blue-text">HRM Teams Across India</span></h2>
+    </div>
+
+    <!-- Featured -->
+    <div class="testi-featured-card">
+      <div class="tfc-quote">"</div>
+      <p class="tfc-text">WorkPilot HRM helped us automate attendance and payroll completely. Our 150-member field team now marks GPS attendance, and payroll processing time dropped from 3 days to just 2 hours. The ROI was visible in the first month itself.</p>
+      <div class="tfc-author">
+        <div class="tfc-avatar" style="background:linear-gradient(135deg,#059669,#047857)">VM</div>
+        <div>
+          <div class="tfc-name">Vikram Mehta</div>
+          <div class="tfc-role">HRM Director · LogiFreight India · 300 employees</div>
+        </div>
+        <div class="tfc-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="tc-top">
+          <div class="tc-av" style="background:linear-gradient(135deg,#2563EB,#1D4ED8)">PN</div>
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p>"Employee tracking and reporting have become much easier. We manage 4 companies from a single login. Best HRMS decision we've made."</p>
+        <div class="tc-name">Priya Nair</div>
+        <div class="tc-role">Group HRM Head · RetailMart</div>
+      </div>
+      <div class="testi-card">
+        <div class="tc-top">
+          <div class="tc-av" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">SI</div>
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p>"Selfie attendance and geo-fencing solved our proxy attendance problem completely. 300+ factory workers onboarded in just 2 days."</p>
+        <div class="tc-name">Suresh Iyer</div>
+        <div class="tc-role">Operations Manager · ManufacturePro</div>
+      </div>
+      <div class="testi-card">
+        <div class="tc-top">
+          <div class="tc-av" style="background:linear-gradient(135deg,#F97316,#EA580C)">AS</div>
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p>"PF, ESI, TDS — all auto-calculated. Ran our annual appraisal cycle for 400 employees in a week. Impressive product."</p>
+        <div class="tc-name">Anita Sharma</div>
+        <div class="tc-role">CFO · TechStartup Bengaluru</div>
+      </div>
+      <div class="testi-card">
+        <div class="tc-top">
+          <div class="tc-av" style="background:linear-gradient(135deg,#0891B2,#0E7490)">RG</div>
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p>"Field sales team marks GPS attendance, we see real-time locations, verify client visits, and get automated daily reports."</p>
+        <div class="tc-name">Rahul Gupta</div>
+        <div class="tc-role">Sales Head · ServiceFirst Ltd</div>
+      </div>
+      <div class="testi-card">
+        <div class="tc-top">
+          <div class="tc-av" style="background:linear-gradient(135deg,#9333EA,#7E22CE)">DR</div>
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p>"Went from spreadsheets to fully automated HRM in one day. The onboarding wizard had us set up in under an hour."</p>
+        <div class="tc-name">Deepika Reddy</div>
+        <div class="tc-role">HRM Manager · GrowFast Solutions</div>
+      </div>
+      <div class="testi-card">
+        <div class="tc-top">
+          <div class="tc-av" style="background:linear-gradient(135deg,#DC2626,#B91C1C)">MK</div>
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p>"Switched from a legacy system costing 3x more. WorkPilot HRM does everything plus GPS, appraisals, and help desk. Migration was seamless."</p>
+        <div class="tc-name">Mohan Kumar</div>
+        <div class="tc-role">CTO · BuildRight Construction</div>
+      </div>
+    </div>
+
+    <!-- Rating strip -->
+    <div class="rating-strip">
+      <div class="rs-item"><div class="rs-num">4.9★</div><div class="rs-src">Google Reviews</div><div class="rs-cnt">218 reviews</div></div>
+      <div class="rs-sep"></div>
+      <div class="rs-item"><div class="rs-num">4.8★</div><div class="rs-src">G2 Crowd</div><div class="rs-cnt">142 reviews</div></div>
+      <div class="rs-sep"></div>
+      <div class="rs-item"><div class="rs-num">4.9★</div><div class="rs-src">Capterra</div><div class="rs-cnt">96 reviews</div></div>
+      <div class="rs-sep"></div>
+      <div class="rs-item"><div class="rs-num">500+</div><div class="rs-src">Companies</div><div class="rs-cnt">Trust WorkPilot HRM</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="cta-bg-mesh"></div>
+  <div class="wrap">
+    <div class="fcta-inner">
+      <h2 class="fcta-title">Ready to Transform Your<br/>HRM Operations?</h2>
+      <p class="fcta-sub">Book a free demo and see how WorkPilot HRM can streamline your workforce management in 30 minutes.</p>
+      <div class="fcta-btns">
+        <a href="index.html" class="fcta-btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Demo
+        </a>
+        <a href="index.html" class="fcta-btn-outline">Contact Sales</a>
+      </div>
+      <p class="fcta-note">No credit card &nbsp;·&nbsp; 14-day free trial &nbsp;·&nbsp; Cancel anytime</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="home.html" class="nav-logo" style="margin-bottom:14px;display:inline-flex">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="9" fill="#2563EB"/><path d="M10 28V16l10-6 10 6v12l-10 6-10-6z" fill="white" opacity="0.9"/><path d="M20 10l10 6-10 6-10-6 10-6z" fill="white"/><circle cx="20" cy="22" r="3" fill="#F97316"/></svg>
+          <div class="logo-text"><span class="logo-main" style="color:white">WorkPilot <b style="color:#60A5FA">HRM</b></span></div>
+        </a>
+        <p class="foot-desc">Smart HRM. Simplified Workforce Management. India's most comprehensive cloud HRMS for SMEs and enterprises.</p>
+        <div class="foot-socials">
+          <a href="#" class="fsoc">in</a>
+          <a href="#" class="fsoc">𝕏</a>
+          <a href="#" class="fsoc">gh</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="#">Features</a><a href="#">Modules</a><a href="#">Pricing</a>
+        <a href="#">Integrations</a><a href="#">Security</a><a href="#">Roadmap</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#">About Us</a><a href="#">Careers</a><a href="blog.html">Blog</a>
+        <a href="#">Press Kit</a><a href="#">Partners</a><a href="#">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="#">Documentation</a><a href="#">API Reference</a><a href="#">Help Center</a>
+        <a href="#">Tutorials</a><a href="#">Webinars</a><a href="#">Community</a>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+        <a href="#">GDPR</a><a href="#">Cookie Policy</a><a href="#">SLA</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 WorkPilot HRM. All rights reserved. Made in India 🇮🇳</span>
+      <div class="foot-badges">
+        <span>ISO 27001</span><span>GDPR Ready</span><span>SSL Secured</span><span>99.9% Uptime</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Navbar scroll ── */
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+/* ── Mobile nav ── */
+function toggleNav(){
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+/* ── Animated counters ── */
+function animateCounters(){
+  document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
+    const target=parseInt(el.dataset.target);
+    const step=Math.ceil(target/60);
+    let cur=0;
+    const t=setInterval(()=>{
+      cur=Math.min(cur+step,target);
+      el.textContent=cur.toLocaleString('en-IN');
+      if(cur>=target)clearInterval(t);
+    },25);
+  });
+}
+const statsObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCounters();statsObs.disconnect();}});
+},{threshold:0.4});
+const statsEl=document.querySelector('.stats-bar');
+if(statsEl)statsObs.observe(statsEl);
+
+/* ── Pricing Toggle ── */
+document.getElementById('pt-monthly').classList.add('active-pt');
+function setPricing(mode){
+  const annual=mode==='annual';
+  document.getElementById('pt-monthly').classList.toggle('active-pt',!annual);
+  document.getElementById('pt-annual').classList.toggle('active-pt',annual);
+  document.getElementById('pt-knob').style.transform=annual?'translateX(22px)':'translateX(0)';
+  if(annual){
+    document.getElementById('p-starter').textContent='4,800';
+    document.getElementById('p-growth').textContent='119';
+    document.getElementById('p-ent').textContent='159';
+    document.getElementById('pn-starter').textContent='Up to 15 employees · Billed yearly';
+    document.getElementById('pn-growth').textContent='Min ₹3,999/month · Billed yearly';
+    document.getElementById('pg-period').textContent='/emp/mo';
+    document.getElementById('pe-period').textContent='/emp/mo';
+  } else {
+    document.getElementById('p-starter').textContent='6,000';
+    document.getElementById('p-growth').textContent='149';
+    document.getElementById('p-ent').textContent='199';
+    document.getElementById('pn-starter').textContent='Up to 15 employees included';
+    document.getElementById('pn-growth').textContent='Minimum ₹4,999/month';
+    document.getElementById('pg-period').textContent='/emp/mo';
+    document.getElementById('pe-period').textContent='/emp/mo';
+  }
+}
+
+/* ── Dashboard Showcase Tabs ── */
+function switchShowcase(btn,panelId){
+  document.querySelectorAll('.stab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.showcase-panel').forEach(p=>p.classList.remove('active'));
+  const panel=document.getElementById(panelId);
+  if(panel)panel.classList.add('active');
+}
+
+/* ── Scroll fade-in ── */
+const fadeObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in-view');});
+},{threshold:0.08});
+document.querySelectorAll('.mod-card,.ind-card,.testi-card,.price-card,.why-item').forEach(el=>{
+  el.classList.add('will-fade');
+  fadeObs.observe(el);
+});
+</script>
+</body>
+</html>
+

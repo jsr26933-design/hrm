@@ -1,0 +1,560 @@
+?<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkPilot HRM â€” Smart HRM. Simplified Workforce Management.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/main.css?v=9" />
+  <link rel="stylesheet" href="css/components.css?v=9" />
+  <link rel="stylesheet" href="css/modules.css?v=9" />
+  <link rel="stylesheet" href="css/premium.css?v=9" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <!-- Real WP Logo in loader -->
+      <svg width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Swirl Ring -->
+        <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" />
+        <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="4.5" fill="none" stroke-linecap="round" />
+        <g transform="translate(66, 16) rotate(10)">
+          <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+          <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+        </g>
+        <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+        <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#FFFFFF" />
+      </svg>
+      <div class="loader-brand" style="font-weight: 800; font-size: 24px; letter-spacing: -0.5px;"><span style="color: #ffffff;">WORK</span><span style="color: #F59E0B;">PILOT</span> <span style="color: #F59E0B; font-size: 18px; font-weight: 600; letter-spacing: 2px;">HRM</span></div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <div class="loader-text">Initializing workspace…</div>
+    </div>
+  </div>
+  <!-- Login Screen -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-container">
+      
+      <!-- Left Column: Smarter Workforce. Stronger Future. -->
+      <div class="login-left-panel">
+        <!-- Logo -->
+        <div class="login-brand-logo">
+          <div class="brand-logo-icon">
+            <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round" />
+              <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="5.5" fill="none" stroke-linecap="round" />
+              <g transform="translate(66, 16) rotate(10)">
+                <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+                <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+              </g>
+              <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+              <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#FFFFFF" />
+            </svg>
+          </div>
+          <div class="brand-logo-text-wrap">
+            <div class="brand-main-title">WORK<span style="color: #F59E0B;">PILOT</span></div>
+            <div class="brand-sub-title"><span></span> HRM <span></span></div>
+          </div>
+        </div>
+
+        <!-- Big Headline -->
+        <div class="login-headline">
+          <h1><span class="yellow-text">Smarter</span> Workforce.<br><span class="yellow-text">Stronger</span> Future.</h1>
+          <p class="login-desc">WorkPilot HRM is your all-in-one solution to manage employees, payroll, leaves, attendance and much more – effortlessly.</p>
+          <div class="yellow-bar"></div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="login-features-grid">
+          <div class="feature-item-box">
+            <div class="feature-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="feature-item-label">Employee Management</div>
+          </div>
+          <div class="feature-item-box">
+            <div class="feature-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <div class="feature-item-label">Attendance Tracking</div>
+          </div>
+          <div class="feature-item-box">
+            <div class="feature-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <div class="feature-item-label">Payroll Management</div>
+          </div>
+          <div class="feature-item-box">
+            <div class="feature-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <div class="feature-item-label">Reports & Analytics</div>
+          </div>
+        </div>
+
+        <!-- Decorative elements inside left panel -->
+        <div class="decor-circle-bottom"></div>
+        <div class="decor-grid-dots"></div>
+      </div>
+      
+      <!-- Right Column: Welcome Back! -->
+      <div class="login-right-panel">
+        <!-- Top Language Dropdown -->
+        <div class="lang-selector-wrap">
+          <div class="lang-selector">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="lang-globe">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span>English</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="lang-arrow">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="login-form-container">
+          <h2 class="welcome-back-title">Welcome Back!</h2>
+          <p class="welcome-back-subtitle">Sign in to continue to WorkPilot HRM</p>
+
+          <form class="login-form" onsubmit="handleLogin(event)">
+            <div class="form-group-v2">
+              <label class="form-label-v2">Email Address</label>
+              <div class="input-with-icon-v2">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="input-icon">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <input type="text" id="login-email" class="form-input-v2" placeholder="Enter your email" value="admin@workpilot.hr" required />
+              </div>
+            </div>
+
+            <div class="form-group-v2">
+              <label class="form-label-v2">Password</label>
+              <div class="input-with-icon-v2">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="input-icon">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                <input type="password" id="login-password" class="form-input-v2" placeholder="Enter your password" value="password123" required />
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="input-eye-toggle" onclick="togglePasswordVisibility()">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="login-actions-v2">
+              <label class="remember-me-v2">
+                <input type="checkbox" checked />
+                <span class="custom-checkbox"></span>
+                Remember me
+              </label>
+              <a href="#" class="forgot-password-v2" onclick="showToast('Password recovery email sent.', 'info')">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login-v2 btn-login">
+              Sign In
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="btn-arrow">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+          </form>
+
+          <div class="divider-v2">
+            <span>or continue with</span>
+          </div>
+
+          <div class="social-login-grid">
+            <button type="button" class="btn-social-v2" onclick="handleGoogleLogin()">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+              </svg>
+              Google
+            </button>
+            <button type="button" class="btn-social-v2" onclick="showToast('Signing in with Microsoft...', 'info'); setTimeout(handleGoogleLogin, 1000)">
+              <svg viewBox="0 0 23 23" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="11" height="11" fill="#F25022"/>
+                <rect x="12" y="0" width="11" height="11" fill="#7FBA00"/>
+                <rect x="0" y="12" width="11" height="11" fill="#00A4EF"/>
+                <rect x="12" y="12" width="11" height="11" fill="#FFB900"/>
+              </svg>
+              Microsoft
+            </button>
+          </div>
+
+          <div class="signup-prompt-v2">
+            Don't have an account? <a href="#" onclick="showToast('Sign up is disabled for this demo.', 'info')">Sign Up</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="login-footer-v2">
+      &copy; 2024 WorkPilot HRM. All rights reserved.
+    </div>
+  </div>
+
+<!-- Main App -->
+  <div id="app" class="app hidden">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand" style="padding: 16px; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.08);">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round" />
+          <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="5.5" fill="none" stroke-linecap="round" />
+          <g transform="translate(66, 16) rotate(10)">
+            <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+            <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+          </g>
+          <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+          <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#FFFFFF" />
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name-sidebar" style="font-size: 16px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1;">
+            <span style="color: #ffffff;">WORK</span><span style="color: #F59E0B;">PILOT</span>
+            <span style="display: block; font-size: 10px; font-weight: 600; color: #F59E0B; letter-spacing: 2.5px; margin-top: 2px;">HRM</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="sidebar-company-selector">
+        <div class="company-select-btn" onclick="toggleCompanyDropdown()">
+          <div class="company-avatar" style="background:#F97316">TC</div>
+          <div class="company-info">
+            <span class="company-name" id="active-company-name">TechCorp India</span>
+            <span class="company-plan">Enterprise Plan</span>
+          </div>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="company-dropdown" id="company-dropdown">
+          <div class="company-option active" onclick="switchCompany('TechCorp India','TC')">
+            <div class="company-avatar small">TC</div>
+            <span>TechCorp India</span>
+            <svg class="check-icon" width="14" height="14" fill="none" stroke="#2563EB" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="company-option" onclick="switchCompany('RetailMart','RM')">
+            <div class="company-avatar small rm">RM</div>
+            <span>RetailMart</span>
+          </div>
+          <div class="company-option" onclick="switchCompany('LogiFreight','LF')">
+            <div class="company-avatar small lf">LF</div>
+            <span>LogiFreight</span>
+          </div>
+          <div class="company-add" onclick="showAddCompany()">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add New Company
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Main</div>
+        <a class="nav-item active" onclick="navigate('dashboard')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <div class="nav-section-label">HRM Core</div>
+        <a class="nav-item" onclick="navigate('employees')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Employees</span>
+          <span class="nav-badge">248</span>
+        </a>
+        <a class="nav-item" onclick="navigate('attendance')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Attendance</span>
+        </a>
+        <a class="nav-item" onclick="navigate('leaves')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          <span>Leave Management</span>
+          <span class="nav-badge warning">5</span>
+        </a>
+        <a class="nav-item" onclick="navigate('payroll')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Payroll</span>
+        </a>
+        <div class="nav-section-label">Workforce</div>
+        <a class="nav-item" onclick="navigate('tasks')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span>Task Management</span>
+        </a>
+        <a class="nav-item" onclick="navigate('tracking')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Workforce Tracking</span>
+        </a>
+        <a class="nav-item" onclick="navigate('gps')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>GPS Attendance</span>
+          <span class="nav-badge success">Live</span>
+        </a>
+        <a class="nav-item" onclick="navigate('recruitment')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Recruitment</span>
+          <span class="nav-badge">6</span>
+        </a>
+        <a class="nav-item" onclick="navigate('hrcalendar')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>HRM Calendar</span>
+        </a>
+        <div class="nav-section-label">Analytics</div>
+        <a class="nav-item" onclick="navigate('reports')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span>Reports & Analytics</span>
+        </a>
+        <a class="nav-item" onclick="navigate('appraisal')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Performance</span>
+        </a>
+        <a class="nav-item" onclick="navigate('assets')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Asset Management</span>
+        </a>
+        <a class="nav-item" onclick="navigate('helpdesk')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Help Desk</span>
+          <span class="nav-badge warning">3</span>
+        </a>
+        <div class="nav-section-label">Settings</div>
+        <a class="nav-item" onclick="navigate('selfservice')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Self Service Portal</span>
+        </a>
+        <a class="nav-item" onclick="navigate('rbac')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Roles & Access</span>
+        </a>
+        <a class="nav-item" onclick="navigate('onboarding')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+          <span>Setup Wizard</span>
+        </a>
+        <a class="nav-item" onclick="navigate('settings')" href="#">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-avatar-wrap">
+          <div class="user-avatar">AK</div>
+          <div class="user-status online"></div>
+        </div>
+        <div class="user-info">
+          <span class="user-name">Arjun Kumar</span>
+          <span class="user-role">HRM Administrator</span>
+        </div>
+        <button class="logout-btn" onclick="handleLogout()" title="Logout">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+      <!-- Top Header -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-btn" onclick="toggleSidebar()">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="breadcrumb" id="breadcrumb">
+            <span>Dashboard</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="search-box" style="position:relative">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Search employees, payroll, tasks..." id="global-search-input" autocomplete="off" />
+            <kbd>Ctrl K</kbd>
+            <div class="search-results" id="search-results" style="display:none"></div>
+          </div>
+          <button class="topbar-btn" onclick="showNotifications()">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="notif-dot">4</span>
+          </button>
+          <button class="topbar-btn">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </button>
+          <div class="topbar-avatar" onclick="navigate('selfservice')">
+            <div class="user-avatar small">AK</div>
+            <span>Arjun Kumar</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="page-content" id="page-content">
+        <!-- Content injected by JS -->
+      </main>
+    </div>
+  </div>
+
+  <!-- Notification Panel -->
+  <div class="notification-panel" id="notification-panel">
+    <div class="notif-header">
+      <h3>Notifications</h3>
+      <span class="notif-count">4 new</span>
+      <button onclick="showNotifications()">✕</button>
+    </div>
+    <div class="notif-list">
+      <div class="notif-item unread">
+        <div class="notif-icon leave">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+        </div>
+        <div class="notif-body">
+          <p><strong>Priya Sharma</strong> applied for 3 days leave</p>
+          <span>2 mins ago</span>
+        </div>
+      </div>
+      <div class="notif-item unread">
+        <div class="notif-icon payroll">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5"/></svg>
+        </div>
+        <div class="notif-body">
+          <p>Payroll for June 2025 is <strong>pending approval</strong></p>
+          <span>1 hour ago</span>
+        </div>
+      </div>
+      <div class="notif-item unread">
+        <div class="notif-icon attend">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="notif-body">
+          <p><strong>12 employees</strong> are late today</p>
+          <span>3 hours ago</span>
+        </div>
+      </div>
+      <div class="notif-item unread">
+        <div class="notif-icon task">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/></svg>
+        </div>
+        <div class="notif-body">
+          <p>New task assigned: <strong>Q3 Appraisal Setup</strong></p>
+          <span>Yesterday</span>
+        </div>
+      </div>
+    </div>
+    <div class="notif-footer">
+      <a href="#">View all notifications</a>
+    </div>
+  </div>
+  <div class="overlay" id="overlay" onclick="closeOverlays()"></div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Floating Action Button -->
+  <div class="fab" id="fab-btn" onclick="toggleFAB()" title="Quick Actions" style="display:none">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </div>
+  <!-- FAB Menu -->
+  <div id="fab-menu" style="display:none;position:fixed;bottom:90px;right:28px;z-index:89;flex-direction:column;gap:8px;align-items:flex-end">
+    <div class="fab-option" onclick="navigate('employees')" style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:24px;padding:8px 16px 8px 12px;box-shadow:var(--shadow-md);cursor:pointer;font-size:13px;font-weight:600;color:var(--gray-700);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+      <span style="font-size:16px">👤</span> Add Employee
+    </div>
+    <div class="fab-option" onclick="navigate('leaves')" style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:24px;padding:8px 16px 8px 12px;box-shadow:var(--shadow-md);cursor:pointer;font-size:13px;font-weight:600;color:var(--gray-700);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+      <span style="font-size:16px">📅</span> Apply Leave
+    </div>
+    <div class="fab-option" onclick="navigate('attendance')" style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:24px;padding:8px 16px 8px 12px;box-shadow:var(--shadow-md);cursor:pointer;font-size:13px;font-weight:600;color:var(--gray-700);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+      <span style="font-size:16px">✅</span> Mark Attendance
+    </div>
+    <div class="fab-option" onclick="navigate('tasks')" style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:24px;padding:8px 16px 8px 12px;box-shadow:var(--shadow-md);cursor:pointer;font-size:13px;font-weight:600;color:var(--gray-700);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+      <span style="font-size:16px">📋</span> Create Task
+    </div>
+    <div class="fab-option" onclick="navigate('recruitment')" style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:24px;padding:8px 16px 8px 12px;box-shadow:var(--shadow-md);cursor:pointer;font-size:13px;font-weight:600;color:var(--gray-700);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+      <span style="font-size:16px">💼</span> Post Job
+    </div>
+    <div class="fab-option" onclick="navigate('helpdesk')" style="display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--gray-200);border-radius:24px;padding:8px 16px 8px 12px;box-shadow:var(--shadow-md);cursor:pointer;font-size:13px;font-weight:600;color:var(--gray-700);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+      <span style="font-size:16px">🎫</span> Raise Ticket
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav" id="mobile-nav">
+    <div class="mobile-nav-item active" onclick="navigate('dashboard');setMobileActive(this)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="mobile-nav-item" onclick="navigate('employees');setMobileActive(this)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      <span>People</span>
+    </div>
+    <div class="mobile-nav-item" onclick="navigate('attendance');setMobileActive(this)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/></svg>
+      <span>Attend</span>
+    </div>
+    <div class="mobile-nav-item" onclick="navigate('leaves');setMobileActive(this)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Leave</span>
+    </div>
+    <div class="mobile-nav-item" onclick="navigate('payroll');setMobileActive(this)">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span>Payroll</span>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/employees.js"></script>
+  <script src="js/attendance.js"></script>
+  <script src="js/leaves.js"></script>
+  <script src="js/payroll.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/tracking.js"></script>
+  <script src="js/gps.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/selfservice.js"></script>
+  <script src="js/rbac.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/recruitment.js"></script>
+  <script src="js/onboarding.js"></script>
+  <script src="js/appraisal.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/helpdesk.js"></script>
+  <script>
+    function togglePasswordVisibility() {
+      const pwdInput = document.getElementById('login-password');
+      const eyeIcon = document.querySelector('.input-eye-toggle');
+      if (pwdInput) {
+        if (pwdInput.type === 'password') {
+          pwdInput.type = 'text';
+          if (eyeIcon) eyeIcon.style.color = '#024B37';
+        } else {
+          pwdInput.type = 'password';
+          if (eyeIcon) eyeIcon.style.color = '#94A3B8';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,619 @@
+/* ===== WorkPilot HR — Blog Stylesheet ===== */
+
+/* ── Container dimensions ── */
+.blog-content-section {
+  padding: 60px 0;
+  background-color: #f8fafc;
+}
+
+.blog-container {
+  max-width: 1320px; /* User requested: 1200px – 1320px container */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── Layout Wrapper ── */
+.blog-layout-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.blog-main-content {
+  flex: 1; /* Left side takes remaining width */
+  min-width: 0;
+}
+
+.blog-sidebar {
+  width: 300px; /* User requested: 300px – 350px width */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ── Navbar Dark Mode Theme Overrides ── */
+#navbar.navbar {
+  background-color: #011C13 !important; /* Deep dark green matching hero gradient start */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  height: 85px !important; /* User requested: 80px - 90px height */
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.3s ease !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+}
+
+#navbar.navbar.scrolled {
+  background-color: #01110B !important; /* Even darker green when scrolled */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .nav-links a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 16px !important; /* User requested: 16px Menu Items */
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s ease !important;
+}
+
+.navbar .nav-links a:hover {
+  color: #F59E0B !important;
+}
+
+.navbar .nav-links a.nav-item-active {
+  color: #F59E0B !important;
+  font-weight: 600 !important;
+}
+
+.navbar .nav-links a.nav-item-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #F59E0B;
+  border-radius: 2px;
+}
+
+/* Brand Logo Text and Colors */
+.navbar .brand-logo-text {
+  color: #ffffff !important;
+  font-size: 28px !important; /* User requested: 28px – 36px */
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.navbar .brand-logo-pilot {
+  color: #F59E0B !important; /* Gold logo text */
+}
+
+.navbar .brand-logo-sub {
+  color: #F59E0B !important;
+  font-size: 16px !important; /* User requested: 14px – 18px */
+  font-weight: 600;
+}
+
+/* Update SVG logo paths to white/gold for dark theme */
+.navbar .brand-logo-icon-svg path[stroke="#0F172A"] {
+  stroke: #ffffff !important;
+}
+.navbar .brand-logo-icon-svg path[fill="#0F172A"] {
+  fill: #ffffff !important;
+}
+
+/* Custom Outlined Login Button */
+.navbar .btn-nav-login {
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 10px 22px !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.navbar .btn-nav-login:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+}
+
+/* Custom Hamburger Icon for Dark Navbar */
+.navbar .nav-hamburger span {
+  background-color: #ffffff !important;
+}
+
+/* ── Hero section ── */
+.blog-hero {
+  background: linear-gradient(180deg, #011C13 0%, #02382A 100%);
+  color: white;
+  min-height: 400px; /* User requested: 350px – 500px hero height */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.blog-hero-inner {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-hero-text {
+  max-width: 700px;
+}
+
+.blog-hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px; /* User requested: 56px */
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.blog-hero p {
+  font-size: 20px; /* Proportional subheading size */
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.blog-hero-illustration-wrap {
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Blog Grid ── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* User requested: 3-columns layout */
+  gap: 24px;
+}
+
+/* ── Blog Card ── */
+.blog-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 460px; /* User requested: 420px – 480px height */
+  width: 100%; /* Spans 100% of grid cell */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px -5px rgba(2, 75, 55, 0.12);
+  border-color: rgba(2, 75, 55, 0.2);
+}
+
+.blog-card-img-wrap {
+  height: 220px; /* User requested: 220px height (roughly 16:9 ratio) */
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.blog-card-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #024B37;
+  color: white;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.blog-card-body {
+  padding: 24px; /* User requested: 20px – 24px padding */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.blog-card-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.blog-card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px; /* User requested: 24px */
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-card-title a:hover {
+  color: #024B37;
+}
+
+.blog-card-desc {
+  font-size: 16px; /* User requested: 16px description */
+  color: #64748B;
+  line-height: 1.5;
+  margin-bottom: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px; /* User requested: 16px Button Text */
+  font-weight: 700;
+  color: #024B37;
+  text-decoration: none;
+  transition: gap 0.2s;
+  margin-top: 16px;
+}
+
+.blog-card-link:hover {
+  gap: 10px;
+}
+
+/* ── Sidebar Components ── */
+.sidebar-widget {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+}
+
+.sidebar-search {
+  display: flex;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.sidebar-search:focus-within {
+  border-color: #024B37;
+}
+
+.sidebar-search input {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.sidebar-search-btn {
+  background: #012117;
+  color: white;
+  border: none;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-search-btn:hover {
+  background: #024B37;
+}
+
+.widget-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f5f9;
+  position: relative;
+}
+
+.widget-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 40px;
+  height: 2px;
+  background: #024B37;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14.5px;
+  color: #475569;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.category-item:hover {
+  color: #024B37;
+}
+
+.category-count {
+  border: 1.5px solid #024B37; /* Mockup style: thin green circle border */
+  color: #024B37;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.category-item:hover .category-count {
+  background: #024B37;
+  color: white;
+}
+
+/* Popular Posts */
+.popular-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.popular-post-item {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.popular-post-thumb {
+  width: 72px;
+  height: 54px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.popular-post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-post-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popular-post-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.popular-post-item:hover .popular-post-title {
+  color: #024B37;
+}
+
+.popular-post-date {
+  font-size: 11.5px;
+  color: #94A3B8;
+}
+
+.btn-sidebar-view {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #012117;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 15px;
+  border: none;
+}
+
+.btn-sidebar-view:hover {
+  background: #024B37;
+}
+
+/* ── CTA Banner ── */
+.blog-cta-banner {
+  background: linear-gradient(135deg, #012117 0%, #02382A 100%);
+  border-radius: 20px;
+  padding: 40px 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.blog-cta-text h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px; /* User requested Section Heading: 40px */
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.blog-cta-text h3 span {
+  color: #F59E0B;
+}
+
+.blog-cta-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px; /* User requested Description: 16px */
+}
+
+.blog-cta-btn {
+  background: #F59E0B;
+  color: #000000;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px; /* User requested Button Text: 16px */
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(245,158,11,0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.blog-cta-btn:hover {
+  background: #D97706;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 1200px) {
+  .blog-layout-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .blog-sidebar {
+    width: 100%;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+  
+  /* Mobile: Font Size: 30–40% smaller */
+  .blog-hero {
+    padding: 40px 0;
+    min-height: 300px;
+  }
+  
+  .blog-hero h1 {
+    font-size: 36px; /* 35% smaller than 56px */
+  }
+  
+  .blog-hero p {
+    font-size: 14px; /* 30% smaller than 20px */
+  }
+  
+  .blog-hero-illustration-wrap {
+    display: none;
+  }
+  
+  .blog-card {
+    height: auto; /* Allow height to adapt */
+    max-width: 100%;
+  }
+  
+  .blog-card-title {
+    font-size: 18px; /* 25% smaller than 24px */
+  }
+  
+  .blog-card-desc {
+    font-size: 14px; /* 12% smaller */
+  }
+  
+  .blog-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 30px;
+  }
+  
+  .blog-cta-text h3 {
+    font-size: 26px; /* 35% smaller than 40px */
+  }
+  
+  .blog-cta-text p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Menu Dark Overrides */
+.navbar .nav-mobile {
+  background-color: #011C13 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar .nav-mobile a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.navbar .nav-mobile a:hover,
+.navbar .nav-mobile a.nav-item-active {
+  color: #F59E0B !important;
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Insights & Ideas — WorkPilot HRM Blog</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/landing.css?v=9" />
+  <link rel="stylesheet" href="css/blog.css?v=9" />
+</head>
+<body>
+
+<!-- ══════════════════════════ NAVBAR ══════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="landing.html" class="nav-brand">
+      <!-- Custom High-Fidelity WorkPilot SVG Logo Icon -->
+      <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-icon-svg">
+        <!-- Swirl Ring (Dark Slate & Gold) -->
+        <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#0F172A" stroke-width="3.5" fill="none" stroke-linecap="round" />
+        <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="4.5" fill="none" stroke-linecap="round" />
+        
+        <!-- Paper Airplane -->
+        <g transform="translate(66, 16) rotate(10)">
+          <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+          <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+        </g>
+        
+        <!-- Stylized slanted P (Gold) -->
+        <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+
+        <!-- Stylized W (Dark Slate for White Nav) -->
+        <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#0F172A" />
+      </svg>
+      <span class="brand-logo-text">WORK<span class="brand-logo-pilot">PILOT</span> <span class="brand-logo-sub">HRM</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="landing.html">Home</a></li>
+      <li><a href="landing.html#pricing">Pricing</a></li>
+      <li><a href="landing.html#hero">Demo</a></li>
+      <li><a href="landing.html#cta">Download</a></li>
+      <li><a href="blog.html" class="nav-item-active">Blog</a></li>
+      <li><a href="landing.html#footer">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="index.html" class="btn-nav-login">Login</a>
+      <a href="landing.html#hero" class="btn-demo-header" style="background:#F59E0B; color:#000000; padding:10px 18px; border-radius:6px; font-weight:700; font-size:14px; margin-left:12px; text-decoration:none; box-shadow: 0 4px 10px rgba(245,158,11,0.2); transition: all 0.2s ease;">Book a Demo →</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="landing.html">Home</a>
+    <a href="landing.html#pricing">Pricing</a>
+    <a href="landing.html#hero">Demo</a>
+    <a href="landing.html#cta">Download</a>
+    <a href="blog.html" class="nav-item-active">Blog</a>
+    <a href="landing.html#footer">Contact</a>
+    <a href="index.html" class="btn-nav-login" style="text-align:center;margin-top:12px">Login</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════ HERO SECTION ══════════════════════════ -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="blog-hero-text">
+      <h1>HR Insights & Ideas</h1>
+      <p>Stay updated with the latest trends, tips and best practices in HR, Payroll, Attendance and more.</p>
+    </div>
+    <div class="blog-hero-illustration-wrap">
+      <!-- Decorative Blog Illustration in SVG -->
+      <svg width="240" height="180" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Main Document/Blog Card -->
+        <rect x="30" y="20" width="110" height="110" rx="8" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-width="2" />
+        <!-- Stacked Documents behind -->
+        <rect x="42" y="10" width="110" height="110" rx="8" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="2" />
+        <!-- Top Title Lines -->
+        <rect x="58" y="30" width="40" height="8" rx="2" fill="#F59E0B" />
+        <rect x="58" y="46" width="76" height="4" rx="2" fill="#ffffff" fill-opacity="0.8" />
+        <!-- Paragraph Text Lines -->
+        <rect x="58" y="60" width="76" height="3" rx="1.5" fill="#ffffff" fill-opacity="0.5" />
+        <rect x="58" y="70" width="76" height="3" rx="1.5" fill="#ffffff" fill-opacity="0.5" />
+        <rect x="58" y="80" width="56" height="3" rx="1.5" fill="#ffffff" fill-opacity="0.5" />
+        <!-- Decorative Pencil -->
+        <g transform="translate(130, 95) rotate(-45)">
+          <rect x="0" y="0" width="10" height="45" rx="2" fill="#F59E0B" />
+          <path d="M 0 40 L 5 47 L 10 40 Z" fill="#D97706" />
+          <path d="M 3 44 L 5 47 L 7 44 Z" fill="#012117" />
+          <rect x="0" y="0" width="10" height="8" fill="#EF4444" />
+        </g>
+        <!-- Floating Circles -->
+        <circle cx="150" cy="30" r="6" fill="#F59E0B" fill-opacity="0.6" />
+        <circle cx="20" cy="90" r="10" fill="#ffffff" fill-opacity="0.1" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ MAIN CONTENT ══════════════════════════ -->
+<section class="blog-content-section">
+  <div class="blog-container">
+    <div class="blog-layout-wrapper">
+    
+    <!-- Left: Blog Posts Grid -->
+    <div class="blog-main-content">
+      <div class="blog-grid">
+        
+        <!-- Card 1 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <span class="blog-card-tag">HR Management</span>
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" alt="HRM Software" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 20, 2024
+              </span>
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Admin
+              </span>
+            </div>
+            <h3 class="blog-card-title"><a href="#">What is HRM Software and Why Your Business Needs It?</a></h3>
+            <p class="blog-card-desc">Learn how HRM software simplifies HR processes and helps businesses save time and improve efficiency by automating attendance, payroll, compliance, and employee data management.</p>
+            <a href="#" class="blog-card-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <span class="blog-card-tag">Attendance</span>
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" alt="Biometric vs Mobile Attendance" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 18, 2024
+              </span>
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Admin
+              </span>
+            </div>
+            <h3 class="blog-card-title"><a href="#">Biometric vs Mobile Attendance Which is Better?</a></h3>
+            <p class="blog-card-desc">Compare biometric scanners and mobile-based GPS attendance systems to find the best workforce management solution for your business model and operational needs.</p>
+            <a href="#" class="blog-card-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <span class="blog-card-tag">Payroll</span>
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" alt="Payroll Processing" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 15, 2024
+              </span>
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Admin
+              </span>
+            </div>
+            <h3 class="blog-card-title"><a href="#">Payroll Processing: Best Practices for Accuracy</a></h3>
+            <p class="blog-card-desc">Follow these essential best practices to ensure accurate payroll calculation, tax deductions, and compliance with the latest Indian labour regulations.</p>
+            <a href="#" class="blog-card-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <span class="blog-card-tag">Leave Management</span>
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop" alt="Effective Leave Policy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 12, 2024
+              </span>
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Admin
+              </span>
+            </div>
+            <h3 class="blog-card-title"><a href="#">How to Create an Effective Leave Policy?</a></h3>
+            <p class="blog-card-desc">A comprehensive step-by-step guide to designing a fair, structured, and compliant employee leave policy that boosts company productivity and worker satisfaction.</p>
+            <a href="#" class="blog-card-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <span class="blog-card-tag">Compliance</span>
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop" alt="Labour Laws India" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 10, 2024
+              </span>
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Admin
+              </span>
+            </div>
+            <h3 class="blog-card-title"><a href="#">Important Labour Laws Every Employer Must Know</a></h3>
+            <p class="blog-card-desc">Understand the fundamental statutory compliance policies, EPF rules, ESIC guidelines, and basic labour rights in India to prevent legal disputes.</p>
+            <a href="#" class="blog-card-link">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <span class="blog-card-tag">Technology</span>
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Cloud HRM vs Traditional" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                May 8, 2024
+              </span>
+              <span class="blog-card-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Admin
+              </span>
+            </div>
+            <h3 class="blog-card-title"><a href="#">Cloud HRM vs Traditional HRM Which One to Choose?</a></h3>
+            <p class="blog-card-desc">Compare the costs, scalability, data security, and ease-of-use of cloud-based HR systems against old desktop legacy databases.</p>
+            <a href="#" class="blog-card-link">Read More &rarr;</a>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+    
+    <!-- Right: Sidebar -->
+    <div class="blog-sidebar">
+      
+      <!-- Widget 1: Search -->
+      <div class="sidebar-widget">
+        <div class="sidebar-search">
+          <input type="text" placeholder="Search blogs..." />
+          <button class="sidebar-search-btn" onclick="alert('Search is under construction in this demo.')">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Widget 2: Categories -->
+      <div class="sidebar-widget">
+        <h4 class="widget-title">Categories</h4>
+        <div class="category-list">
+          <a href="#" class="category-item">
+            <span>👤 HR Management</span>
+            <span class="category-count">12</span>
+          </a>
+          <a href="#" class="category-item">
+            <span>📅 Attendance Management</span>
+            <span class="category-count">10</span>
+          </a>
+          <a href="#" class="category-item">
+            <span>💰 Payroll Management</span>
+            <span class="category-count">9</span>
+          </a>
+          <a href="#" class="category-item">
+            <span>📋 Leave Management</span>
+            <span class="category-count">7</span>
+          </a>
+          <a href="#" class="category-item">
+            <span>⚖️ Compliance & Laws</span>
+            <span class="category-count">8</span>
+          </a>
+          <a href="#" class="category-item">
+            <span>📡 Technology</span>
+            <span class="category-count">6</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Widget 3: Popular Posts -->
+      <div class="sidebar-widget">
+        <h4 class="widget-title">Popular Posts</h4>
+        <div class="popular-posts-list">
+          <a href="#" class="popular-post-item">
+            <div class="popular-post-thumb">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=150&auto=format&fit=crop" alt="HRM Software" />
+            </div>
+            <div class="popular-post-info">
+              <span class="popular-post-title">What is HRM Software and Why Your Business Needs It?</span>
+              <span class="popular-post-date">May 20, 2024</span>
+            </div>
+          </a>
+          <a href="#" class="popular-post-item">
+            <div class="popular-post-thumb">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=150&auto=format&fit=crop" alt="Payroll Best Practices" />
+            </div>
+            <div class="popular-post-info">
+              <span class="popular-post-title">Payroll Processing: Best Practices for Accuracy</span>
+              <span class="popular-post-date">May 15, 2024</span>
+            </div>
+          </a>
+          <a href="#" class="popular-post-item">
+            <div class="popular-post-thumb">
+              <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=150&auto=format&fit=crop" alt="Effective Leave Policy" />
+            </div>
+            <div class="popular-post-info">
+              <span class="popular-post-title">How to Create an Effective Leave Policy?</span>
+              <span class="popular-post-date">May 12, 2024</span>
+            </div>
+          </a>
+        </div>
+        <button class="btn-sidebar-view" onclick="alert('Demo feature: Displaying top 3 popular articles.')">
+          View All Posts &rarr;
+        </button>
+      </div>
+      
+    </div> <!-- Close .blog-sidebar -->
+    
+    </div> <!-- Close .blog-layout-wrapper -->
+    
+    <!-- Smarter HR Solution CTA Card -->
+    <div class="blog-cta-banner">
+      <div class="blog-cta-text">
+        <h3>Looking for a <span>Smarter HR Solution?</span></h3>
+        <p>Automate your HR processes and focus on what matters most — Your People.</p>
+      </div>
+      <a href="landing.html#hero" class="blog-cta-btn">Book a Demo</a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="footer" id="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="landing.html" class="footer-brand-logo-wrap">
+          <svg width="58" height="58" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-logo-svg">
+            <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" />
+            <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="4.5" fill="none" stroke-linecap="round" />
+            
+            <g transform="translate(66, 16) rotate(10)">
+              <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+              <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+            </g>
+            
+            <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+            <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#FFFFFF" />
+          </svg>
+          <div class="footer-logo-text-wrap">
+            <span class="footer-logo-title-text">WORK<span class="text-gold">PILOT</span></span>
+            <div class="footer-logo-hrm-row">
+              <span class="hrm-line"></span>
+              <span class="footer-logo-hrm-text">HRM</span>
+              <span class="hrm-line"></span>
+            </div>
+          </div>
+        </a>
+        <p class="footer-logo-tagline-text">SMARTER WORKFORCE. STRONGER FUTURE.</p>
+        <p class="footer-about">Attendance • Payroll • Business Management. All-in-one platform for modern businesses.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+          </a>
+          <a href="#" class="social-btn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="social-btn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4 class="footer-col-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="landing.html#features">Features</a></li>
+          <li><a href="landing.html#pricing">Pricing</a></li>
+          <li><a href="landing.html#how-it-works">How It Works</a></li>
+          <li><a href="landing.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="landing.html">Home</a></li>
+          <li><a href="landing.html#about">About Us</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="#">Company Rules</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links contact-list">
+          <li class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="contact-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:support@workpilot.hr">support@workpilot.hr</a>
+          </li>
+          <li class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="contact-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+917627055170">+91 7627055170</a>
+          </li>
+          <li class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="contact-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Hans Bhawan, B-148, Rana Sanga Marg, Jagatpura, Jaipur, Rajasthan 302017</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 WorkPilot HRM. All rights reserved. Made in India 🇮🇳</div>
+      <div class="footer-badges">
+        <span class="footer-badge">ISO 27001</span>
+        <span class="footer-badge">GDPR Ready</span>
+        <span class="footer-badge">SSL Secured</span>
+        <span class="footer-badge">99.9% Uptime</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile Nav
+function toggleMobileNav() {
+  document.getElementById('nav-mobile').classList.toggle('open');
+  document.getElementById('nav-hamburger').classList.toggle('open');
+}
+</script>
+</body>
+</html>

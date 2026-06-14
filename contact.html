@@ -1,0 +1,154 @@
+?<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact & Demo — WorkPilot HRM</title>
+  <link rel="icon" href="assets/favicon.svg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/brand.css"/>
+  <link rel="stylesheet" href="css/pages.css"/>
+</head>
+<body>
+<div class="page-hero">
+  <div class="page-hero-tag">📅 Book a Demo</div>
+  <h1>Let's Show You<br/><span>WorkPilot HRM Live</span></h1>
+  <p>Schedule a free 30-minute demo with our product specialist. We'll customize the demo for your industry and team size.</p>
+</div>
+
+<section class="pg-section">
+  <div class="w">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div class="contact-form-wrap reveal">
+        <div class="cf-header">
+          <h2>Book Your Free Demo</h2>
+          <p>Fill in your details and we'll reach out within 2 business hours.</p>
+        </div>
+        <form class="cf-form" onsubmit="submitDemo(event)">
+          <div class="cf-row">
+            <div class="cf-group">
+              <label>Full Name *</label>
+              <input type="text" placeholder="Arjun Kumar" required/>
+            </div>
+            <div class="cf-group">
+              <label>Work Email *</label>
+              <input type="email" placeholder="arjun@company.com" required/>
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="+91 98765 43210" required/>
+            </div>
+            <div class="cf-group">
+              <label>Company Name *</label>
+              <input type="text" placeholder="TechCorp India" required/>
+            </div>
+          </div>
+          <div class="cf-row">
+            <div class="cf-group">
+              <label>Number of Employees *</label>
+              <select required>
+                <option value="">Select range</option>
+                <option>1–15 employees</option>
+                <option>16–50 employees</option>
+                <option>51–200 employees</option>
+                <option>201–500 employees</option>
+                <option>500+ employees</option>
+              </select>
+            </div>
+            <div class="cf-group">
+              <label>Industry *</label>
+              <select required>
+                <option value="">Select industry</option>
+                <option>Technology / IT</option>
+                <option>Manufacturing</option>
+                <option>Retail</option>
+                <option>Logistics / Delivery</option>
+                <option>Construction</option>
+                <option>Healthcare</option>
+                <option>Education</option>
+                <option>Service Industry</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="cf-group">
+            <label>What are you looking to solve?</label>
+            <div class="cf-checkboxes">
+              <label><input type="checkbox"/> GPS Attendance</label>
+              <label><input type="checkbox" checked/> Payroll Automation</label>
+              <label><input type="checkbox"/> Leave Management</label>
+              <label><input type="checkbox"/> Performance Appraisal</label>
+              <label><input type="checkbox"/> Workforce Tracking</label>
+              <label><input type="checkbox"/> Reports & Analytics</label>
+            </div>
+          </div>
+          <div class="cf-group">
+            <label>Message (optional)</label>
+            <textarea rows="3" placeholder="Tell us about your current HRM challenges…"></textarea>
+          </div>
+          <button type="submit" class="cf-submit" id="cf-submit-btn">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Schedule My Free Demo
+          </button>
+          <p class="cf-note">✓ Response within 2 hours &nbsp;·&nbsp; ✓ No commitment &nbsp;·&nbsp; ✓ 30-minute session</p>
+        </form>
+        <div class="cf-success" id="cf-success" style="display:none">
+          <div class="cfs-icon">🎉</div>
+          <h3>Demo Request Received!</h3>
+          <p>Thank you! Our team will reach out to you within 2 business hours to schedule your personalized demo.</p>
+          <a href="index.html" class="btn-primary" style="margin-top:16px">Explore the App →</a>
+        </div>
+      </div>
+
+      <!-- Info Panel -->
+      <div class="contact-info reveal" data-delay="80">
+        <div class="ci-block">
+          <h3>What to expect in the demo</h3>
+          <div class="ci-steps">
+            <div class="ci-step"><div class="ci-num">1</div><div><b>Introduction (5 min)</b><p>Understanding your team size, industry, and current pain points.</p></div></div>
+            <div class="ci-step"><div class="ci-num">2</div><div><b>Live Product Tour (20 min)</b><p>We walk through modules relevant to your business — payroll, attendance, GPS, or more.</p></div></div>
+            <div class="ci-step"><div class="ci-num">3</div><div><b>Q&amp;A &amp; Next Steps (5 min)</b><p>Your questions answered. Pricing, onboarding, and how to get started.</p></div></div>
+          </div>
+        </div>
+        <div class="ci-block" style="margin-top:28px">
+          <h3>Contact us directly</h3>
+          <div class="ci-contacts">
+            <div class="ci-c"><span>📧</span><div><b>Email</b><a href="mailto:sales@workpilot.hr">sales@workpilot.hr</a></div></div>
+            <div class="ci-c"><span>📞</span><div><b>Phone</b><a href="tel:+918000000000">+91 80000 00000</a></div></div>
+            <div class="ci-c"><span>💬</span><div><b>WhatsApp</b><a href="#">Chat with us →</a></div></div>
+            <div class="ci-c"><span>📍</span><div><b>Office</b><span>Mumbai, India</span></div></div>
+          </div>
+        </div>
+        <div class="ci-trust">
+          <div class="cit-item"><span>✓</span> Free 14-day trial</div>
+          <div class="cit-item"><span>✓</span> No credit card required</div>
+          <div class="cit-item"><span>✓</span> Free data migration</div>
+          <div class="cit-item"><span>✓</span> Dedicated onboarding support</div>
+          <div class="cit-item"><span>✓</span> Cancel anytime</div>
+          <div class="cit-item"><span>✓</span> ISO 27001 secure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/shared.js"></script>
+<script>
+injectNav('contact.html');
+injectFooter();
+function submitDemo(e){
+  e.preventDefault();
+  const btn=document.getElementById('cf-submit-btn');
+  btn.textContent='Submitting…';btn.disabled=true;
+  setTimeout(()=>{
+    document.querySelector('.cf-form').style.display='none';
+    document.getElementById('cf-success').style.display='block';
+  },1400);
+}
+</script>
+</body>
+</html>
+

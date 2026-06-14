@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <!-- WP Icon Mark -->
+  <!-- W letter -->
+  <path d="M8 18L16 52L24 30L32 52L40 18" stroke="#0F2D6B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- P letter + D arc -->
+  <path d="M46 18V52" stroke="#0F2D6B" stroke-width="7" stroke-linecap="round"/>
+  <path d="M46 18 Q66 18 66 30 Q66 42 46 42" stroke="#0F2D6B" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <!-- Blue swoosh arc -->
+  <path d="M10 56 Q35 48 55 38 Q68 32 74 24" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- People icons (3 figures) inside/right of D -->
+  <circle cx="56" cy="25" r="3" fill="#2563EB"/>
+  <path d="M51 35 Q51 29 56 29 Q61 29 61 35" stroke="#2563EB" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="63" cy="24" r="2.5" fill="#2563EB" opacity="0.7"/>
+  <path d="M59 34 Q59 28.5 63 28.5 Q67 28.5 67 34" stroke="#2563EB" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="49" cy="24" r="2.5" fill="#2563EB" opacity="0.7"/>
+  <!-- Bar chart (orange) -->
+  <rect x="49" y="40" width="4" height="10" rx="1" fill="#F97316"/>
+  <rect x="55" y="36" width="4" height="14" rx="1" fill="#F97316"/>
+  <rect x="61" y="32" width="4" height="18" rx="1" fill="#F97316"/>
+
+  <!-- Text: WorkPilot -->
+  <text x="84" y="40" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#0F2D6B" letter-spacing="-0.5">WorkPilot</text>
+  <!-- Text: HR (orange) -->
+  <text x="214" y="40" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#F97316" letter-spacing="-0.5">HR</text>
+  <!-- Tagline -->
+  <line x1="84" y1="48" x2="92" y2="48" stroke="#94A3B8" stroke-width="1"/>
+  <text x="96" y="52" font-family="Arial,sans-serif" font-size="7.5" fill="#64748B" letter-spacing="1.2" font-weight="600">SMART HR. SIMPLIFIED WORKFORCE MANAGEMENT.</text>
+  <line x1="236" y1="48" x2="244" y2="48" stroke="#94A3B8" stroke-width="1"/>
+</svg>

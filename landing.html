@@ -1,0 +1,1035 @@
+?<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WorkPilot HRM — Smart HRM. Simplified Workforce Management.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/landing.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAVBAR ══════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="landing.html" class="nav-brand">
+      <!-- Custom High-Fidelity WorkPilot SVG Logo Icon -->
+      <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-icon-svg">
+        <!-- Swirl Ring (Dark Slate & Gold) -->
+        <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#0F172A" stroke-width="3.5" fill="none" stroke-linecap="round" />
+        <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="4.5" fill="none" stroke-linecap="round" />
+        
+        <!-- Paper Airplane -->
+        <g transform="translate(66, 16) rotate(10)">
+          <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+          <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+        </g>
+        
+        <!-- Stylized slanted P (Gold) -->
+        <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+
+        <!-- Stylized W (Dark Slate for White Nav) -->
+        <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#0F172A" />
+      </svg>
+      <span class="brand-logo-text">WORK<span class="brand-logo-pilot">PILOT</span> <span class="brand-logo-sub">HRM</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="landing.html" class="nav-item-active">Home</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#hero">Demo</a></li>
+      <li><a href="#cta">Download</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="index.html" class="btn-nav-login">Login</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="landing.html" class="nav-item-active">Home</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#hero">Demo</a>
+    <a href="#cta">Download</a>
+    <a href="blog.html">Blog</a>
+    <a href="#footer">Contact</a>
+    <a href="index.html" class="btn-nav-login" style="text-align:center;margin-top:12px">Login</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════ HERO SECTION ══════════════════════════ -->
+<section class="hero-hrone" id="hero">
+  <!-- Curve accent at bottom-left -->
+  <div class="hrone-wave-accent"></div>
+  
+  <div class="hero-hrone-container">
+    <!-- Left Column: Copy & Badges -->
+    <div class="hero-hrone-left">
+      <h1 class="hero-hrone-title">
+        World's <span class="highlight-yellow">Simplest</span><br/>
+        <span class="highlight-white">HRM</span> <span class="highlight-yellow">Software</span>
+      </h1>
+      <p class="hero-hrone-subtitle">
+        Awarded as the 'easiest-to-use' HRM software.
+      </p>
+      
+      <!-- Review Badges Grid -->
+      <div class="hrone-reviews-grid">
+        <div class="review-badge-col">
+          <div class="rb-logo">
+            <span class="logo-circle-red">G</span> G2
+          </div>
+          <div class="rb-stars">★★★★★</div>
+          <div class="rb-details">1740+ Reviews | 4.8</div>
+        </div>
+        <div class="review-badge-col">
+          <div class="rb-logo font-gartner">
+            Gartner.
+          </div>
+          <div class="rb-stars">★★★★★</div>
+          <div class="rb-details">650+ Reviews | 4.9</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Column: Visuals & Form Card -->
+    <div class="hero-hrone-right">
+      <!-- Slanted Dashboard Mockup -->
+      <div class="slanted-mockup-wrap">
+        <img src="assets/images/hero-dashboard.svg" alt="WorkPilot App Interface Mockup" class="slanted-mockup-img" />
+      </div>
+      
+      <!-- White Floating Form Card -->
+      <div class="demo-form-card">
+        <h2 class="form-card-title">Get Your No-Cost Demo Today!</h2>
+        
+        <form class="demo-card-form" onsubmit="submitDemoForm(event)">
+          <div class="form-input-group">
+            <input type="email" id="demo-email" placeholder="Work Email *" required />
+          </div>
+          
+          <div class="form-input-group phone-input-group">
+            <span class="phone-prefix">+91</span>
+            <input type="tel" id="demo-phone" placeholder="Phone number *" pattern="[0-9]{10}" required />
+          </div>
+          
+          <div class="form-row-double">
+            <div class="form-input-group">
+              <select id="demo-employees" required>
+                <option value="" disabled selected>No. of Employees *</option>
+                <option value="1-15">1-15 Employees</option>
+                <option value="16-50">16-50 Employees</option>
+                <option value="51-200">51-200 Employees</option>
+                <option value="201-500">201-500 Employees</option>
+                <option value="500+">500+ Employees</option>
+              </select>
+            </div>
+            <div class="form-input-group">
+              <input type="text" id="demo-city" placeholder="City *" required />
+            </div>
+          </div>
+          
+          <p class="form-consent-text">
+            By providing your information, you hereby consent to the WorkPilot HRM <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.
+          </p>
+          
+          <button type="submit" class="btn-demo-submit">
+            Book a Demo! →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ LOGOS / TRUSTED BY ══════════════════════════ -->
+<section class="logos-section">
+  <div class="container">
+    <h2 class="logos-heading">Trusted by 2,000+ Brands, 10 Lakh+ Users</h2>
+    <div class="logos-brands-grid">
+      <!-- Flipkart Reset -->
+      <div class="brand-logo-card">
+        <div class="logo-flipkart-reset">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="display: block;"><path d="M12 2a4 4 0 0 0-4 4v2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-3V6a4 4 0 0 0-4-4zm-2 6V6a2 2 0 0 1 4 0v2H10z" fill="#F59E0B" /><path d="M9 11v2a3 3 0 0 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2z" fill="#2563EB" /></svg>
+          <div class="logo-text-group">
+            <span class="logo-fk-main">Flipkart</span>
+            <span class="logo-fk-sub">reset</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ABP News -->
+      <div class="brand-logo-card">
+        <svg width="85" height="26" viewBox="0 0 100 30" style="display: block;">
+          <polygon points="8,0 21,13 8,26 16,26 29,13 16,0" fill="#E1251B" />
+          <polygon points="0,0 13,13 0,26 6,26 19,13 6,0" fill="#F59E0B" />
+          <text x="34" y="20" font-family="'Inter', -apple-system, sans-serif" font-weight="900" font-size="20" fill="#0f172a">abp</text>
+        </svg>
+      </div>
+
+      <!-- Amar Ujala -->
+      <div class="brand-logo-card">
+        <span class="logo-amar-ujala">अमर उजाला</span>
+      </div>
+
+      <!-- Wow! Momo -->
+      <div class="brand-logo-card">
+        <div class="logo-wow-momo">
+          <span class="wow-red">Wow!</span> <span class="momo-black">MOMO</span>
+        </div>
+      </div>
+
+      <!-- Haier -->
+      <div class="brand-logo-card">
+        <svg width="80" height="26" viewBox="0 0 80 30" style="display: block;">
+          <text x="0" y="21" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="22" fill="#0A5CA8" letter-spacing="0.5">Haier</text>
+        </svg>
+      </div>
+
+      <!-- Bikanervala -->
+      <div class="brand-logo-card">
+        <div class="logo-bikanervala">
+          BIKANERVALA
+        </div>
+      </div>
+
+      <!-- Muthoot Fincorp -->
+      <div class="brand-logo-card">
+        <div class="logo-muthoot">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#0A66C2" style="display: block;"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path d="M6,17 C8,15 10,14 12,14 C14,14 16,15 18,17 M12,6 C10,6 8,8 8,10 C8,12 10,14 12,14 C14,14 16,12 16,10 C16,8 14,6 12,6 Z" fill="white" opacity="0.3"/><path d="M12,5 L12,19" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="white" stroke-width="1.5" fill="none"/></svg>
+          <div class="logo-text-group">
+            <span class="muthoot-title">muthoot</span>
+            <span class="muthoot-sub">FINCORP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════ MODULE HIGHLIGHTS ══════════════════════════ -->
+<section class="highlight-cards-section">
+  <div class="container">
+    <div class="cards-marquee-container">
+      <div class="cards-marquee-track">
+        
+        <!-- Original 8 Cards -->
+        <!-- Card 1: GPS Live Tracking -->
+        <div class="hl-card card-gps">
+          <div class="hl-badge-row">
+            <div class="glass-badge">
+              <span class="badge-dot pulse-red"></span> Live Tracking
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/gps-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">GPS TRACKING</span>
+            <h3 class="hl-card-title">Real-Time GPS Live Tracking</h3>
+            <p class="hl-card-desc">Track field staff locations, geofence sites, and verify client visits live.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Automated Payroll -->
+        <div class="hl-card card-payroll">
+          <div class="hl-badge-row">
+            <div class="glass-badge-green">
+              ₹4.8L <span class="badge-sub">This Month</span>
+            </div>
+            <div class="glass-badge-gold">
+              🔒 Auto-Processed
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/payroll-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">PAYROLL</span>
+            <h3 class="hl-card-title">Automated Payroll in One Click</h3>
+            <p class="hl-card-desc">Auto-calculate salaries, PF, TDS & generate payslips.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Leave Management -->
+        <div class="hl-card card-leaves">
+          <div class="hl-badge-row">
+            <div class="glass-badge-grey">
+              12 <span class="badge-sub">Pending Leaves</span>
+            </div>
+            <div class="glass-badge-green">
+              ✓ Instant Approval
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/attendance-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">LEAVE MANAGEMENT</span>
+            <h3 class="hl-card-title">Paperless Leave Approvals</h3>
+            <p class="hl-card-desc">Apply, approve & track leaves from anywhere.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Reports & Analytics -->
+        <div class="hl-card card-reports">
+          <div class="hl-badge-row">
+            <div class="glass-badge-grey">
+              24+ <span class="badge-sub">Report Types</span>
+            </div>
+            <div class="glass-badge-blue">
+              📊 Live Dashboard
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/appraisal-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">REPORTS & ANALYTICS</span>
+            <h3 class="hl-card-title">Powerful Business Insights</h3>
+            <p class="hl-card-desc">Daily, weekly & monthly reports at your fingertips.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Business Expense -->
+        <div class="hl-card card-expense">
+          <div class="hl-badge-row">
+            <div class="glass-badge">
+              📄 Auto-Tracked
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/appraisal-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">EXPENSES</span>
+            <h3 class="hl-card-title">Business Expense Tracking</h3>
+            <p class="hl-card-desc">Track employee claims, scan receipts, and auto-approve expenses.</p>
+          </div>
+        </div>
+
+        <!-- Card 6: Digital Payslips Instantly -->
+        <div class="hl-card card-payslips">
+          <div class="hl-badge-row">
+            <div class="glass-badge-blue">
+              56 <span class="badge-sub">Payslips Sent</span>
+            </div>
+            <div class="glass-badge-grey">
+              📄 PDF Ready
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/payroll-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">PAYSLIPS</span>
+            <h3 class="hl-card-title">Digital Payslips Instantly</h3>
+            <p class="hl-card-desc">Generate & email payslips to all employees in seconds.</p>
+          </div>
+        </div>
+
+        <!-- Card 7: Flexible Shift Scheduling -->
+        <div class="hl-card card-shift">
+          <div class="hl-badge-row">
+            <div class="glass-badge-grey">
+              3 <span class="badge-sub">Shift Types</span>
+            </div>
+            <div class="glass-badge-green">
+              ⏰ 3 Shifts Active
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/attendance-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">SHIFT MANAGEMENT</span>
+            <h3 class="hl-card-title">Flexible Shift Scheduling</h3>
+            <p class="hl-card-desc">Morning, evening, night — manage all shift types and rosters.</p>
+          </div>
+        </div>
+
+        <!-- Card 8: Real-Time Attendance -->
+        <div class="hl-card card-attendance">
+          <div class="hl-badge-row">
+            <div class="glass-badge-green">
+              98% <span class="badge-sub">Accuracy</span>
+            </div>
+            <div class="glass-badge-blue">
+              ✓ Live Sync
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/gps-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">ATTENDANCE</span>
+            <h3 class="hl-card-title">Real-Time Attendance Tracking</h3>
+            <p class="hl-card-desc">Geo-location, selfie punch & biometric integrations.</p>
+          </div>
+        </div>
+
+        <!-- Cloned 8 Cards (for seamless infinite loop) -->
+        <!-- Card 1: GPS Live Tracking -->
+        <div class="hl-card card-gps">
+          <div class="hl-badge-row">
+            <div class="glass-badge">
+              <span class="badge-dot pulse-red"></span> Live Tracking
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/gps-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">GPS TRACKING</span>
+            <h3 class="hl-card-title">Real-Time GPS Live Tracking</h3>
+            <p class="hl-card-desc">Track field staff locations, geofence sites, and verify client visits live.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Automated Payroll -->
+        <div class="hl-card card-payroll">
+          <div class="hl-badge-row">
+            <div class="glass-badge-green">
+              ₹4.8L <span class="badge-sub">This Month</span>
+            </div>
+            <div class="glass-badge-gold">
+              🔒 Auto-Processed
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/payroll-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">PAYROLL</span>
+            <h3 class="hl-card-title">Automated Payroll in One Click</h3>
+            <p class="hl-card-desc">Auto-calculate salaries, PF, TDS & generate payslips.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Leave Management -->
+        <div class="hl-card card-leaves">
+          <div class="hl-badge-row">
+            <div class="glass-badge-grey">
+              12 <span class="badge-sub">Pending Leaves</span>
+            </div>
+            <div class="glass-badge-green">
+              ✓ Instant Approval
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/attendance-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">LEAVE MANAGEMENT</span>
+            <h3 class="hl-card-title">Paperless Leave Approvals</h3>
+            <p class="hl-card-desc">Apply, approve & track leaves from anywhere.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Reports & Analytics -->
+        <div class="hl-card card-reports">
+          <div class="hl-badge-row">
+            <div class="glass-badge-grey">
+              24+ <span class="badge-sub">Report Types</span>
+            </div>
+            <div class="glass-badge-blue">
+              📊 Live Dashboard
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/appraisal-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">REPORTS & ANALYTICS</span>
+            <h3 class="hl-card-title">Powerful Business Insights</h3>
+            <p class="hl-card-desc">Daily, weekly & monthly reports at your fingertips.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Business Expense -->
+        <div class="hl-card card-expense">
+          <div class="hl-badge-row">
+            <div class="glass-badge">
+              📄 Auto-Tracked
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/appraisal-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">EXPENSES</span>
+            <h3 class="hl-card-title">Business Expense Tracking</h3>
+            <p class="hl-card-desc">Track employee claims, scan receipts, and auto-approve expenses.</p>
+          </div>
+        </div>
+
+        <!-- Card 6: Digital Payslips Instantly -->
+        <div class="hl-card card-payslips">
+          <div class="hl-badge-row">
+            <div class="glass-badge-blue">
+              56 <span class="badge-sub">Payslips Sent</span>
+            </div>
+            <div class="glass-badge-grey">
+              📄 PDF Ready
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/payroll-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">PAYSLIPS</span>
+            <h3 class="hl-card-title">Digital Payslips Instantly</h3>
+            <p class="hl-card-desc">Generate & email payslips to all employees in seconds.</p>
+          </div>
+        </div>
+
+        <!-- Card 7: Flexible Shift Scheduling -->
+        <div class="hl-card card-shift">
+          <div class="hl-badge-row">
+            <div class="glass-badge-grey">
+              3 <span class="badge-sub">Shift Types</span>
+            </div>
+            <div class="glass-badge-green">
+              ⏰ 3 Shifts Active
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/attendance-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">SHIFT MANAGEMENT</span>
+            <h3 class="hl-card-title">Flexible Shift Scheduling</h3>
+            <p class="hl-card-desc">Morning, evening, night — manage all shift types and rosters.</p>
+          </div>
+        </div>
+
+        <!-- Card 8: Real-Time Attendance -->
+        <div class="hl-card card-attendance">
+          <div class="hl-badge-row">
+            <div class="glass-badge-green">
+              98% <span class="badge-sub">Accuracy</span>
+            </div>
+            <div class="glass-badge-blue">
+              ✓ Live Sync
+            </div>
+          </div>
+          <div class="hl-card-bg-img" style="background-image: url('assets/images/gps-screen.svg');"></div>
+          <div class="hl-card-overlay"></div>
+          <div class="hl-card-content">
+            <span class="hl-card-category">ATTENDANCE</span>
+            <h3 class="hl-card-title">Real-Time Attendance Tracking</h3>
+            <p class="hl-card-desc">Geo-location, selfie punch & biometric integrations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ INDUSTRIES ══════════════════════════ -->
+<section class="industries-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">🏭 Built for Every Industry</div>
+      <h2 class="section-title">Designed for your sector</h2>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card" style="background:#EFF6FF">
+        <div class="industry-icon">💻</div>
+        <h3 class="industry-name">Technology</h3>
+        <p class="industry-desc">Remote teams, ESOP tracking, sprint-based performance reviews</p>
+        <a href="index.html" class="industry-link">See features →</a>
+      </div>
+      <div class="industry-card" style="background:#FFF7ED">
+        <div class="industry-icon">🏭</div>
+        <h3 class="industry-name">Manufacturing</h3>
+        <p class="industry-desc">Shift scheduling, factory floor attendance, safety compliance</p>
+        <a href="index.html" class="industry-link">See features →</a>
+      </div>
+      <div class="industry-card" style="background:#ECFDF5">
+        <div class="industry-icon">🛒</div>
+        <h3 class="industry-name">Retail</h3>
+        <p class="industry-desc">Multi-location staff, part-time workforce, store-wise reports</p>
+        <a href="index.html" class="industry-link">See features →</a>
+      </div>
+      <div class="industry-card" style="background:#F3E8FF">
+        <div class="industry-icon">🚚</div>
+        <h3 class="industry-name">Logistics</h3>
+        <p class="industry-desc">Field force GPS tracking, delivery agent attendance, route logs</p>
+        <a href="index.html" class="industry-link">See features →</a>
+      </div>
+      <div class="industry-card" style="background:#FEF2F2">
+        <div class="industry-icon">🏥</div>
+        <h3 class="industry-name">Healthcare</h3>
+        <p class="industry-desc">Duty roster, nurse attendance, locum staff management</p>
+        <a href="index.html" class="industry-link">See features →</a>
+      </div>
+      <div class="industry-card" style="background:#ECFEFF">
+        <div class="industry-icon">🏗️</div>
+        <h3 class="industry-name">Construction</h3>
+        <p class="industry-desc">Site worker attendance, contractor management, daily wages</p>
+        <a href="index.html" class="industry-link">See features →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ PRICING ══════════════════════════ -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" style="color: #059669; font-weight: 700; letter-spacing: 0.08em;">PRICING</div>
+      <h2 class="section-title" style="margin-top: 10px;">Simple, Transparent Pricing</h2>
+      <p class="section-desc" style="margin-top: 10px;">Choose your company size. Pay annually. No hidden charges.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="pricing-card starter">
+        <div class="tier-badge">👥 1-15 Employees</div>
+        <h3 class="tier-name">Starter</h3>
+        <div class="tier-price">
+          <span class="price-val">₹599</span>
+          <span class="price-sub">per employee / year</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> Attendance Management</li>
+          <li><span class="tier-check">✓</span> Payroll Automation</li>
+          <li><span class="tier-check">✓</span> Task Management</li>
+          <li><span class="tier-check">✓</span> Shift Management</li>
+          <li><span class="tier-check">✓</span> HR Admin setup</li>
+          <li><span class="tier-check">✓</span> Live Tracking</li>
+          <li><span class="tier-check">✓</span> Customization</li>
+        </ul>
+        <a href="#hero" class="pricing-btn">Get started</a>
+      </div>
+
+      <!-- GROWTH -->
+      <div class="pricing-card growth">
+        <div class="popular-ribbon-new">★ Most Popular</div>
+        <div class="tier-badge">👥 16-50 Employees</div>
+        <h3 class="tier-name">Growth</h3>
+        <div class="tier-price">
+          <span class="price-val">₹6,999</span>
+          <span class="price-sub">per year (flat)</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> Attendance Management</li>
+          <li><span class="tier-check">✓</span> Payroll Automation</li>
+          <li><span class="tier-check">✓</span> Task Management</li>
+          <li><span class="tier-check">✓</span> Shift Management</li>
+          <li><span class="tier-check">✓</span> HR Admin setup</li>
+          <li><span class="tier-check">✓</span> Live Tracking</li>
+          <li><span class="tier-check">✓</span> Offline tracking</li>
+          <li><span class="tier-check">✓</span> Customization</li>
+        </ul>
+        <a href="#hero" class="pricing-btn">Get Started</a>
+      </div>
+
+      <!-- BUSINESS -->
+      <div class="pricing-card business">
+        <div class="tier-badge">👥 51-150 Employees</div>
+        <h3 class="tier-name">Business</h3>
+        <div class="tier-price">
+          <span class="price-val">₹11,999</span>
+          <span class="price-sub">per year (flat)</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> Attendance Management</li>
+          <li><span class="tier-check">✓</span> Payroll Automation</li>
+          <li><span class="tier-check">✓</span> Task Management</li>
+          <li><span class="tier-check">✓</span> Shift Management</li>
+          <li><span class="tier-check">✓</span> HR Admin setup</li>
+          <li><span class="tier-check">✓</span> Live Tracking</li>
+          <li><span class="tier-check">✓</span> Offline tracking</li>
+          <li><span class="tier-check">✓</span> Customization</li>
+        </ul>
+        <a href="#hero" class="pricing-btn">Get started</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="pricing-card enterprise">
+        <div class="tier-badge">👥 150+ Employees</div>
+        <h3 class="tier-name">Enterprise</h3>
+        <div class="tier-price">
+          <span class="price-val">₹14,999</span>
+          <span class="price-sub">per year (flat)</span>
+        </div>
+        <ul class="tier-features">
+          <li><span class="tier-check">✓</span> Attendance Management</li>
+          <li><span class="tier-check">✓</span> Payroll Automation</li>
+          <li><span class="tier-check">✓</span> Task Management</li>
+          <li><span class="tier-check">✓</span> Shift Management</li>
+          <li><span class="tier-check">✓</span> HR Admin setup</li>
+          <li><span class="tier-check">✓</span> Live Tracking</li>
+          <li><span class="tier-check">✓</span> Offline tracking</li>
+          <li><span class="tier-check">✓</span> Customization</li>
+        </ul>
+        <a href="#hero" class="pricing-btn">Get started</a>
+      </div>
+
+    </div>
+
+    <div class="pricing-note" style="margin-top: 40px; font-size: 15px; color: var(--gray-500); font-weight: 500; text-align: center;">
+      All plans billed annually. <a href="pricing.html" style="color: #059669; font-weight: 700; text-decoration: none; margin-left: 5px;">View full pricing details →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ TESTIMONIALS ══════════════════════════ -->
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Straight from Our Customers</h2>
+      <p class="section-desc">Why They Love WorkPilot HRM</p>
+    </div>
+
+    <!-- Video Testimonials Grid -->
+    <div class="video-testimonials-grid">
+      
+      <!-- Card 1: Debraj S. Roy -->
+      <div class="video-testi-card">
+        <div class="video-testi-portrait-wrap">
+          <img src="assets/images/debraj.png" alt="Debraj S. Roy" class="video-testi-portrait"/>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="none" class="play-icon"><polygon points="8 5 19 12 8 19 8 5" fill="#10B981"/></svg>
+          </div>
+        </div>
+        <div class="video-testi-details">
+          <div class="testi-client-logo logo-lux">LUX</div>
+          <p class="testi-client-quote">"Lux found an easiest to use HRM software to manage its workforce."</p>
+          <h4 class="testi-client-name">Debraj S. Roy</h4>
+          <p class="testi-client-role">Head of HRM</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Smriti Khanna -->
+      <div class="video-testi-card">
+        <div class="video-testi-portrait-wrap">
+          <img src="assets/images/smriti.png" alt="Smriti Khanna" class="video-testi-portrait"/>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="none" class="play-icon"><polygon points="8 5 19 12 8 19 8 5" fill="#10B981"/></svg>
+          </div>
+        </div>
+        <div class="video-testi-details">
+          <div class="testi-client-logo logo-wow">WOW SKIN SCIENCE</div>
+          <p class="testi-client-quote">"WOW Skin Science found a simple way to manage attendance."</p>
+          <h4 class="testi-client-name">Smriti Khanna</h4>
+          <p class="testi-client-role">VP HRM</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Yogesh Somani -->
+      <div class="video-testi-card">
+        <div class="video-testi-portrait-wrap">
+          <img src="assets/images/yogesh.png" alt="Yogesh Somani" class="video-testi-portrait"/>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="none" class="play-icon"><polygon points="8 5 19 12 8 19 8 5" fill="#10B981"/></svg>
+          </div>
+        </div>
+        <div class="video-testi-details">
+          <div class="testi-client-logo logo-mrdiy">MR. D.I.Y.</div>
+          <p class="testi-client-quote">"Mr.DIY made HRM effortless with automated roster scheduling."</p>
+          <h4 class="testi-client-name">Yogesh Somani</h4>
+          <p class="testi-client-role">AVP & Head HRM, Mr.DIY</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Rupali C Rane -->
+      <div class="video-testi-card">
+        <div class="video-testi-portrait-wrap">
+          <img src="assets/images/rupali.png" alt="Rupali C Rane" class="video-testi-portrait"/>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" fill="none" class="play-icon"><polygon points="8 5 19 12 8 19 8 5" fill="#10B981"/></svg>
+          </div>
+        </div>
+        <div class="video-testi-details">
+          <div class="testi-client-logo logo-ahh">AHH</div>
+          <p class="testi-client-quote">"AHH made HRM easy, giving their team more time to grow."</p>
+          <h4 class="testi-client-name">Rupali C Rane</h4>
+          <p class="testi-client-role">Nova IVF(AHH Group)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Social Proof Strip -->
+    <div class="proof-strip">
+      <div class="proof-item">
+        <div class="proof-rating">4.9 ★</div>
+        <div class="proof-source">Google Reviews</div>
+        <div class="proof-count">218 reviews</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-rating">4.8 ★</div>
+        <div class="proof-source">G2 Crowd</div>
+        <div class="proof-count">142 reviews</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-rating">4.9 ★</div>
+        <div class="proof-source">Capterra</div>
+        <div class="proof-count">96 reviews</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-rating">500+</div>
+        <div class="proof-source">Companies</div>
+        <div class="proof-count">Trust WorkPilot HRM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FAQ ══════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">❓ FAQ</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>How long does implementation take?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">Most companies are fully set up within 1–3 days. Our guided onboarding wizard walks you through company setup, employee import, and policy configuration step by step.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>Can I import existing employee data?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">Yes. You can bulk import employees via Excel or CSV. We provide ready-made templates and our team assists with data migration at no extra cost.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>Is my data secure?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">Absolutely. WorkPilot HRM uses 256-bit AES encryption, daily backups, ISO 27001-compliant infrastructure, role-based access control, and audit logs for all admin actions.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>Does it work for field workforce?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">Yes — our GPS attendance with geo-fencing and live tracking map is specifically designed for field sales, delivery agents, site workers, and remote employees.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>What statutory compliance is covered?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">We handle PF (12% employer + employee), ESI, Professional Tax (all states), TDS computation, Form 16 generation, and all statutory reports required for Indian payroll compliance.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>Can I manage multiple companies?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">Yes. The Growth plan supports up to 3 companies and Enterprise supports unlimited companies, all manageable from a single login with separate data for each entity.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>Is there a mobile app?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">WorkPilot HRM is fully responsive and works on all devices. A dedicated Android &amp; iOS app is available for employee self-service, GPS attendance, and manager approvals.</div>
+      </div>
+      <div class="faq-item" onclick="toggleLandingFAQ(this)">
+        <div class="faq-question"><span>What kind of support do you offer?</span><svg class="faq-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-answer">Starter plans include email support with 24-hour response. Growth plans have priority support with 4-hour response. Enterprise customers get a dedicated account manager and phone support.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CTA BANNER ══════════════════════════ -->
+<section class="cta-section" id="cta">
+  <div class="cta-bg">
+    <div class="cta-orb cta-orb-1"></div>
+    <div class="cta-orb cta-orb-2"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to transform your HRM?</h2>
+      <p class="cta-desc">Join 500+ companies already using WorkPilot HRM to automate attendance, payroll, and workforce management.</p>
+      <div class="cta-actions">
+        <a href="#hero" class="btn-cta-primary">
+          Start Free 14-Day Trial
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#hero" class="btn-cta-ghost">Schedule a Demo</a>
+      </div>
+      <p class="cta-note">No credit card · 14 days free · Cancel anytime</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="landing.html" class="footer-brand-logo-wrap">
+          <!-- Custom High-Fidelity WorkPilot SVG Logo Icon -->
+          <svg width="58" height="58" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-logo-svg">
+            <!-- Swirl Ring (White & Gold) -->
+            <path d="M 35 15 A 38 38 0 1 0 78 62" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" />
+            <path d="M 18 55 A 38 38 0 0 0 74 72" stroke="#F59E0B" stroke-width="4.5" fill="none" stroke-linecap="round" />
+            
+            <!-- Paper Airplane -->
+            <g transform="translate(66, 16) rotate(10)">
+              <path d="M 0 12 L 20 0 L 14 18 L 10 13 Z" fill="#F59E0B" />
+              <path d="M 10 13 L 20 0 L 14 18 Z" fill="#D97706" />
+            </g>
+            
+            <!-- Stylized slanted P (Gold) -->
+            <path d="M 43 75 L 52 38 H 68 C 74 38 77 43 75 49 C 73 55 68 59 62 59 H 48 L 43 75 Z M 53 51 H 60 C 63 51 65 49 66 46 C 67 43 65 41 62 41 H 55 L 53 51 Z" fill="#F59E0B" />
+
+            <!-- Stylized W (White) -->
+            <path d="M 15 38 L 24 72 H 31 L 38 48 L 44 72 H 51 L 60 38 H 51 L 44 60 L 38 38 H 29 L 22 60 L 15 38 Z" fill="#FFFFFF" />
+          </svg>
+          <div class="footer-logo-text-wrap">
+            <span class="footer-logo-title-text">WORK<span class="text-gold">PILOT</span></span>
+            <div class="footer-logo-hrm-row">
+              <span class="hrm-line"></span>
+              <span class="footer-logo-hrm-text">HRM</span>
+              <span class="hrm-line"></span>
+            </div>
+          </div>
+        </a>
+        <p class="footer-logo-tagline-text">SMARTER WORKFORCE. STRONGER FUTURE.</p>
+        <p class="footer-about">Attendance • Payroll • Business Management. All-in-one platform for modern businesses.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+          </a>
+          <a href="#" class="social-btn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="social-btn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Product Column -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Product</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Column -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="#">Company Rules</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links contact-list">
+          <li class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="contact-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:support@workpilot.hr">support@workpilot.hr</a>
+          </li>
+          <li class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="contact-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+917627055170">+91 7627055170</a>
+          </li>
+          <li class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="contact-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Hans Bhawan, B-148, Rana Sanga Marg, Jagatpura, Jaipur, Rajasthan 302017</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 WorkPilot HRM. All rights reserved. Made in India 🇮🇳</div>
+      <div class="footer-badges">
+        <span class="footer-badge">ISO 27001</span>
+        <span class="footer-badge">GDPR Ready</span>
+        <span class="footer-badge">SSL Secured</span>
+        <span class="footer-badge">99.9% Uptime</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Submit demo form
+function submitDemoForm(event) {
+  event.preventDefault();
+  const phone = document.getElementById('demo-phone').value;
+  
+  // Custom premium toast notification
+  const toast = document.createElement('div');
+  toast.style.position = 'fixed';
+  toast.style.bottom = '24px';
+  toast.style.right = '24px';
+  toast.style.background = '#059669';
+  toast.style.color = 'white';
+  toast.style.padding = '14px 24px';
+  toast.style.borderRadius = '8px';
+  toast.style.boxShadow = '0 10px 15px -3px rgba(0,0,0,0.1)';
+  toast.style.fontFamily = 'Inter, sans-serif';
+  toast.style.fontSize = '14px';
+  toast.style.fontWeight = '600';
+  toast.style.zIndex = '9999';
+  toast.innerText = "🎉 Demo request submitted! We will contact you at +91 " + phone + " shortly.";
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 4000);
+  
+  event.target.reset();
+}
+
+// Mobile Nav
+function toggleMobileNav() {
+  document.getElementById('nav-mobile').classList.toggle('open');
+  document.getElementById('nav-hamburger').classList.toggle('open');
+}
+
+// Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+
+// FAQ Toggle
+function toggleLandingFAQ(el) {
+  const answer = el.querySelector('.faq-answer');
+  const icon = el.querySelector('.faq-icon');
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f => {
+    f.classList.remove('open');
+    f.querySelector('.faq-answer').style.maxHeight = '0';
+    f.querySelector('.faq-icon').style.transform = '';
+  });
+  if (!isOpen) {
+    el.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    icon.style.transform = 'rotate(180deg)';
+  }
+}
+
+// Module Tabs
+function switchModTab(btn, tabId) {
+  document.querySelectorAll('.mod-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.mod-tab-content').forEach(t => t.classList.remove('active'));
+  const el = document.getElementById(tabId);
+  if (el) { el.classList.add('active'); el.querySelectorAll('.fade-up').forEach(c=>c.classList.add('visible')); }
+}
+
+// Intersection Observer — animate on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.feature-card,.module-tile,.testimonial-card,.industry-card,.pricing-card,.how-step').forEach(el => {
+  el.classList.add('fade-up');
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
+

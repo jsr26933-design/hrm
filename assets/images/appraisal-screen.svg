@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" fill="none">
+  <rect width="560" height="360" rx="16" fill="#F8FAFC"/>
+  <!-- Header -->
+  <rect width="560" height="52" rx="16 16 0 0" fill="#7C3AED"/>
+  <text x="24" y="24" font-family="Arial" font-size="13" font-weight="800" fill="white">🎯 Performance Appraisal — Q2 2025</text>
+  <text x="24" y="40" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.6)">75% complete · 186/248 reviews submitted</text>
+  <rect x="420" y="14" width="120" height="26" rx="8" fill="rgba(255,255,255,0.15)"/>
+  <text x="432" y="31" font-family="Arial" font-size="10" fill="white" font-weight="700">+ New Cycle</text>
+  <!-- KPI Row -->
+  <rect x="16" y="64" width="122" height="60" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="30" y="84" font-family="Arial" font-size="8" fill="#64748B" font-weight="600">AVG SCORE</text>
+  <text x="30" y="108" font-family="Arial" font-size="22" font-weight="900" fill="#7C3AED">84.2%</text>
+  <rect x="150" y="64" width="122" height="60" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="164" y="84" font-family="Arial" font-size="8" fill="#64748B" font-weight="600">EXCEPTIONAL</text>
+  <text x="164" y="108" font-family="Arial" font-size="22" font-weight="900" fill="#10B981">18%</text>
+  <rect x="284" y="64" width="122" height="60" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="298" y="84" font-family="Arial" font-size="8" fill="#64748B" font-weight="600">PROMOTIONS</text>
+  <text x="298" y="108" font-family="Arial" font-size="22" font-weight="900" fill="#F97316">12</text>
+  <rect x="418" y="64" width="126" height="60" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="432" y="84" font-family="Arial" font-size="8" fill="#64748B" font-weight="600">PROGRESS</text>
+  <text x="432" y="108" font-family="Arial" font-size="22" font-weight="900" fill="#2563EB">75%</text>
+  <!-- Employee Cards Row -->
+  <text x="20" y="148" font-family="Arial" font-size="11" font-weight="700" fill="#1E293B">Top Performers</text>
+  <!-- Card 1 -->
+  <rect x="16" y="158" width="158" height="180" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="16" y="158" width="158" height="52" rx="12 12 0 0" fill="linear-gradient(135deg,#7C3AED,#6D28D9)"/>
+  <rect x="16" y="158" width="158" height="52" rx="12 12 0 0" fill="#7C3AED"/>
+  <circle cx="95" cy="184" r="20" fill="rgba(255,255,255,0.2)"/>
+  <text x="87" y="189" font-family="Arial" font-size="11" font-weight="800" fill="white">NG</text>
+  <text x="95" y="228" font-family="Arial" font-size="11" font-weight="700" fill="#1E293B" text-anchor="middle">Neha Gupta</text>
+  <text x="95" y="242" font-family="Arial" font-size="9" fill="#64748B" text-anchor="middle">UI/UX Design</text>
+  <!-- Score ring -->
+  <circle cx="95" cy="278" r="24" fill="none" stroke="#E2E8F0" stroke-width="5"/>
+  <circle cx="95" cy="278" r="24" fill="none" stroke="#10B981" stroke-width="5" stroke-dasharray="142 9" stroke-linecap="round" transform="rotate(-90 95 278)"/>
+  <text x="88" y="282" font-family="Arial" font-size="10" font-weight="800" fill="#1E293B">94</text>
+  <rect x="62" y="316" width="66" height="16" rx="8" fill="#ECFDF5"/>
+  <text x="69" y="328" font-family="Arial" font-size="8" fill="#059669" font-weight="700">Exceptional ⭐</text>
+  <!-- Card 2 -->
+  <rect x="188" y="158" width="158" height="180" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="188" y="158" width="158" height="52" rx="12 12 0 0" fill="#7C3AED" opacity="0.9"/>
+  <circle cx="267" cy="184" r="20" fill="rgba(255,255,255,0.2)"/>
+  <text x="259" y="189" font-family="Arial" font-size="11" font-weight="800" fill="white">PS</text>
+  <text x="267" y="228" font-family="Arial" font-size="11" font-weight="700" fill="#1E293B" text-anchor="middle">Priya Sharma</text>
+  <text x="267" y="242" font-family="Arial" font-size="9" fill="#64748B" text-anchor="middle">Engineering</text>
+  <circle cx="267" cy="278" r="24" fill="none" stroke="#E2E8F0" stroke-width="5"/>
+  <circle cx="267" cy="278" r="24" fill="none" stroke="#2563EB" stroke-width="5" stroke-dasharray="131 20" stroke-linecap="round" transform="rotate(-90 267 278)"/>
+  <text x="260" y="282" font-family="Arial" font-size="10" font-weight="800" fill="#1E293B">92</text>
+  <rect x="228" y="316" width="78" height="16" rx="8" fill="#EFF6FF"/>
+  <text x="234" y="328" font-family="Arial" font-size="8" fill="#2563EB" font-weight="700">Exceptional ⭐</text>
+  <!-- Card 3 -->
+  <rect x="360" y="158" width="180" height="180" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="378" y="180" font-family="Arial" font-size="11" font-weight="700" fill="#1E293B">Department Scores</text>
+  <text x="378" y="204" font-family="Arial" font-size="9" fill="#64748B">Engineering</text>
+  <rect x="378" y="210" width="140" height="8" rx="3" fill="#E2E8F0"/>
+  <rect x="378" y="210" width="123" height="8" rx="3" fill="#7C3AED"/>
+  <text x="524" y="219" font-family="Arial" font-size="8" fill="#7C3AED" font-weight="700">88%</text>
+  <text x="378" y="238" font-family="Arial" font-size="9" fill="#64748B">Sales</text>
+  <rect x="378" y="244" width="140" height="8" rx="3" fill="#E2E8F0"/>
+  <rect x="378" y="244" width="105" height="8" rx="3" fill="#F97316"/>
+  <text x="524" y="253" font-family="Arial" font-size="8" fill="#F97316" font-weight="700">75%</text>
+  <text x="378" y="272" font-family="Arial" font-size="9" fill="#64748B">Finance</text>
+  <rect x="378" y="278" width="140" height="8" rx="3" fill="#E2E8F0"/>
+  <rect x="378" y="278" width="118" height="8" rx="3" fill="#10B981"/>
+  <text x="524" y="287" font-family="Arial" font-size="8" fill="#10B981" font-weight="700">84%</text>
+  <text x="378" y="306" font-family="Arial" font-size="9" fill="#64748B">HR</text>
+  <rect x="378" y="312" width="140" height="8" rx="3" fill="#E2E8F0"/>
+  <rect x="378" y="312" width="130" height="8" rx="3" fill="#2563EB"/>
+  <text x="524" y="321" font-family="Arial" font-size="8" fill="#2563EB" font-weight="700">93%</text>
+  <!-- OKR section -->
+  <rect x="16" y="342" width="330" height="12" rx="6" fill="#F1F5F9"/>
+  <rect x="16" y="342" width="248" height="12" rx="6" fill="linear-gradient(to right,#7C3AED,#2563EB)"/>
+  <text x="272" y="352" font-family="Arial" font-size="8" fill="#64748B">75% OKR Progress</text>
+</svg>

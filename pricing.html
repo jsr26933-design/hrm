@@ -1,0 +1,170 @@
+?<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Pricing — WorkPilot HRM</title>
+  <link rel="icon" href="assets/favicon.svg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/brand.css"/>
+  <link rel="stylesheet" href="css/pages.css"/>
+</head>
+<body>
+<div class="page-hero">
+  <div class="page-hero-tag">💳 Simple Pricing</div>
+  <h1>Plans that <span>Grow With You</span></h1>
+  <p>Transparent pricing. No hidden fees. Start free, upgrade when ready. All plans include free onboarding and data migration.</p>
+</div>
+
+<section class="pg-section">
+  <div class="w">
+    <!-- Toggle -->
+    <div class="price-toggle-row">
+      <span class="ptg" id="ptg-m" onclick="setPricePg('m')">Monthly</span>
+      <div class="ptg-sw" onclick="setPricePg(document.getElementById('ptg-m').classList.contains('ptg-a')?'y':'m')">
+        <div class="ptg-knob" id="ptg-k"></div>
+      </div>
+      <span class="ptg" id="ptg-y" onclick="setPricePg('y')">Annual <em class="save-em">Save 20%</em></span>
+    </div>
+
+    <div class="price-cards-grid">
+      <!-- Starter -->
+      <div class="pc-card reveal">
+        <div class="pc-plan-icon">🌱</div>
+        <div class="pc-name">Starter</div>
+        <div class="pc-desc">Perfect for small businesses up to 50 employees</div>
+        <div class="pc-price"><sup>₹</sup><span id="pcp-s">6,000</span><sub id="pcps-s">/year</sub></div>
+        <div class="pc-note" id="pcn-s">Up to 15 employees included</div>
+        <div class="pc-div"></div>
+        <ul class="pc-feats">
+          <li class="pf-y">Employee Management</li>
+          <li class="pf-y">Attendance (Web + Mobile)</li>
+          <li class="pf-y">Leave Management</li>
+          <li class="pf-y">Basic Payroll + Payslips</li>
+          <li class="pf-y">Self-Service Portal</li>
+          <li class="pf-y">Basic Reports</li>
+          <li class="pf-y">Email Support</li>
+          <li class="pf-n">GPS Attendance</li>
+          <li class="pf-n">Performance Appraisal</li>
+          <li class="pf-n">API Access</li>
+        </ul>
+        <a href="index.html" class="pc-btn pc-outline">Get Started Free</a>
+        <p class="pc-trial">14-day free trial · No credit card</p>
+      </div>
+
+      <!-- Growth (Popular) -->
+      <div class="pc-card pc-pop reveal" data-delay="60">
+        <div class="pc-ribbon">⭐ Most Popular</div>
+        <div class="pc-plan-icon">🚀</div>
+        <div class="pc-name">Growth</div>
+        <div class="pc-desc">For growing teams that need advanced automation</div>
+        <div class="pc-price"><sup>₹</sup><span id="pcp-g">149</span><sub id="pcps-g">/emp/mo</sub></div>
+        <div class="pc-note" id="pcn-g">Minimum ₹4,999/month</div>
+        <div class="pc-div"></div>
+        <ul class="pc-feats">
+          <li class="pf-y">Everything in Starter</li>
+          <li class="pf-y">GPS &amp; Selfie Attendance</li>
+          <li class="pf-y">Advanced Payroll + TDS</li>
+          <li class="pf-y">Task Management</li>
+          <li class="pf-y">Performance Appraisal</li>
+          <li class="pf-y">Recruitment Module</li>
+          <li class="pf-y">WhatsApp Integration</li>
+          <li class="pf-y">Priority Support (4hr SLA)</li>
+          <li class="pf-y">Up to 3 Companies</li>
+          <li class="pf-n">Unlimited Companies</li>
+        </ul>
+        <a href="index.html" class="pc-btn pc-primary">Start Free Trial</a>
+        <p class="pc-trial">14-day free trial · No credit card</p>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pc-card reveal" data-delay="120">
+        <div class="pc-plan-icon">🏢</div>
+        <div class="pc-name">Enterprise</div>
+        <div class="pc-desc">For large organizations with complex HRM needs</div>
+        <div class="pc-price"><sup>₹</sup><span id="pcp-e">199</span><sub id="pcps-e">/emp/mo</sub></div>
+        <div class="pc-note" id="pcn-e">Custom pricing for 500+ employees</div>
+        <div class="pc-div"></div>
+        <ul class="pc-feats">
+          <li class="pf-y">Everything in Growth</li>
+          <li class="pf-y">Unlimited Companies</li>
+          <li class="pf-y">Asset Management</li>
+          <li class="pf-y">Help Desk Module</li>
+          <li class="pf-y">REST API Access</li>
+          <li class="pf-y">Dedicated Account Manager</li>
+          <li class="pf-y">SSO + 2FA + Audit Logs</li>
+          <li class="pf-y">99.9% SLA + Phone Support</li>
+          <li class="pf-y">On-premise Option</li>
+          <li class="pf-y">Custom Integrations</li>
+        </ul>
+        <a href="contact.html" class="pc-btn pc-dark">Contact Sales</a>
+        <p class="pc-trial">Custom demo &amp; pilot program</p>
+      </div>
+    </div>
+
+    <!-- Guarantee -->
+    <div class="pc-guarantee">
+      <div class="pcg-item"><span>🔒</span><b>No lock-in</b><small>Cancel anytime</small></div>
+      <div class="pcg-item"><span>🚀</span><b>Free onboarding</b><small>We set it up for you</small></div>
+      <div class="pcg-item"><span>💳</span><b>No hidden fees</b><small>What you see, you pay</small></div>
+      <div class="pcg-item"><span>📦</span><b>Free migration</b><small>We import your data</small></div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="sh" style="margin-top:72px"><h2 class="sh-title">Pricing <span class="bt">FAQ</span></h2></div>
+    <div class="pg-faq">
+      <div class="pf-item" onclick="togglePF(this)">
+        <div class="pf-q">How is pricing calculated? <svg class="pf-ic" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="pf-a">Starter plan is a flat annual fee. Growth and Enterprise are per-employee per-month, billed monthly or annually. You only pay for active employees.</div>
+      </div>
+      <div class="pf-item" onclick="togglePF(this)">
+        <div class="pf-q">Can I switch plans anytime? <svg class="pf-ic" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="pf-a">Yes. You can upgrade or downgrade at any time. When upgrading, you get access immediately. Downgrade takes effect at the next billing cycle.</div>
+      </div>
+      <div class="pf-item" onclick="togglePF(this)">
+        <div class="pf-q">Is there really no credit card for the trial? <svg class="pf-ic" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="pf-a">Correct. Start your 14-day free trial with just your email. No payment info required until you decide to upgrade.</div>
+      </div>
+      <div class="pf-item" onclick="togglePF(this)">
+        <div class="pf-q">What happens to my data if I cancel? <svg class="pf-ic" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="pf-a">You can export all your data before cancellation. After 90 days of account closure, data is permanently deleted per our retention policy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pg-cta"><div class="w" style="text-align:center"><h2>Still have questions? <span>Talk to us.</span></h2><p>Our team will help you choose the right plan and set everything up for free.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a href="contact.html" class="btn-primary" style="padding:14px 32px;font-size:15px">Talk to Sales →</a><a href="index.html" class="btn-outline" style="padding:14px 28px;font-size:15px;color:#0F2D6B;border-color:#CBD5E1">Start Free Trial</a></div></div></section>
+
+<script src="js/shared.js"></script>
+<script>
+injectNav('pricing.html');injectFooter();
+document.getElementById('ptg-m').classList.add('ptg-a');
+function setPricePg(m){
+  const isY=m==='y';
+  document.getElementById('ptg-m').classList.toggle('ptg-a',!isY);
+  document.getElementById('ptg-y').classList.toggle('ptg-a',isY);
+  document.getElementById('ptg-k').style.transform=isY?'translateX(22px)':'';
+  if(isY){
+    document.getElementById('pcp-s').textContent='4,800';document.getElementById('pcps-s').textContent='/year';
+    document.getElementById('pcp-g').textContent='119';document.getElementById('pcps-g').textContent='/emp/mo';
+    document.getElementById('pcp-e').textContent='159';document.getElementById('pcps-e').textContent='/emp/mo';
+    document.getElementById('pcn-s').textContent='Billed annually · Best value';
+    document.getElementById('pcn-g').textContent='Min ₹3,999/mo · Billed annually';
+    document.getElementById('pcn-e').textContent='Custom pricing available';
+  } else {
+    document.getElementById('pcp-s').textContent='6,000';document.getElementById('pcps-s').textContent='/year';
+    document.getElementById('pcp-g').textContent='149';document.getElementById('pcps-g').textContent='/emp/mo';
+    document.getElementById('pcp-e').textContent='199';document.getElementById('pcps-e').textContent='/emp/mo';
+    document.getElementById('pcn-s').textContent='Up to 15 employees included';
+    document.getElementById('pcn-g').textContent='Minimum ₹4,999/month';
+    document.getElementById('pcn-e').textContent='Custom pricing for 500+ employees';
+  }
+}
+function togglePF(el){
+  const a=el.querySelector('.pf-a'),ic=el.querySelector('.pf-ic'),open=el.classList.contains('open');
+  document.querySelectorAll('.pf-item').forEach(i=>{i.classList.remove('open');i.querySelector('.pf-a').style.maxHeight='0';i.querySelector('.pf-ic').style.transform='';});
+  if(!open){el.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';ic.style.transform='rotate(180deg)';}
+}
+</script>
+</body>
+</html>
+

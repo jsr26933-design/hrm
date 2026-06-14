@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" rx="16" fill="#F8FAFC"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="52" rx="16 16 0 0" fill="#0F172A"/>
+  <text x="24" y="24" font-family="Arial" font-size="13" font-weight="800" fill="white">📍 GPS &amp; Field Attendance</text>
+  <text x="24" y="40" font-family="Arial" font-size="10" fill="#64748B">Real-time employee location tracking</text>
+  <circle cx="548" cy="26" r="6" fill="#10B981"/>
+  <text x="560" y="30" font-family="Arial" font-size="9" fill="#10B981" font-weight="700">5 Live</text>
+  <!-- Map area -->
+  <rect x="16" y="64" width="368" height="260" rx="12" fill="#E0F2FE"/>
+  <!-- Map grid -->
+  <line x1="16" y1="104" x2="384" y2="104" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="16" y1="144" x2="384" y2="144" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="16" y1="184" x2="384" y2="184" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="16" y1="224" x2="384" y2="224" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="76" y1="64" x2="76" y2="324" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="136" y1="64" x2="136" y2="324" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="196" y1="64" x2="196" y2="324" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="256" y1="64" x2="256" y2="324" stroke="#BAE6FD" stroke-width="1"/>
+  <line x1="316" y1="64" x2="316" y2="324" stroke="#BAE6FD" stroke-width="1"/>
+  <!-- Roads -->
+  <path d="M16 194 Q100 180 200 194 Q280 208 384 194" stroke="#B0D8F5" stroke-width="6" fill="none"/>
+  <path d="M196 64 Q188 130 196 194 Q204 260 196 324" stroke="#B0D8F5" stroke-width="5" fill="none"/>
+  <!-- Office Geo-fence -->
+  <circle cx="196" cy="180" r="56" fill="rgba(37,99,235,0.07)" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="162" y="176" font-family="Arial" font-size="8" fill="#2563EB" font-weight="700">OFFICE ZONE</text>
+  <text x="170" y="187" font-family="Arial" font-size="7" fill="#93C5FD">500m radius</text>
+  <!-- Map pins with pulse -->
+  <!-- Pin 1 - Mumbai (in zone) -->
+  <circle cx="180" cy="170" r="18" fill="rgba(124,58,237,0.15)"/>
+  <circle cx="180" cy="170" r="18" fill="none" stroke="#7C3AED" stroke-width="1" stroke-dasharray="3 2" opacity="0.5"/>
+  <circle cx="180" cy="170" r="14" fill="#7C3AED"/>
+  <text x="173" y="175" font-family="Arial" font-size="9" font-weight="800" fill="white">PS</text>
+  <polygon points="180,184 175,196 185,196" fill="#7C3AED"/>
+  <rect x="155" y="197" width="50" height="14" rx="4" fill="white" filter="url(#shadow)"/>
+  <text x="160" y="208" font-family="Arial" font-size="8" fill="#1E293B" font-weight="600">Andheri</text>
+  <!-- Pin 2 - Delhi (field) -->
+  <circle cx="96" cy="130" r="14" fill="#059669"/>
+  <text x="89" y="135" font-family="Arial" font-size="9" font-weight="800" fill="white">RM</text>
+  <polygon points="96,144 91,155 101,155" fill="#059669"/>
+  <rect x="72" y="156" width="48" height="14" rx="4" fill="white"/>
+  <text x="77" y="167" font-family="Arial" font-size="8" fill="#1E293B" font-weight="600">CP Delhi</text>
+  <!-- Pin 3 - Bengaluru -->
+  <circle cx="290" cy="260" r="14" fill="#F97316"/>
+  <text x="283" y="265" font-family="Arial" font-size="9" font-weight="800" fill="white">SP</text>
+  <polygon points="290,274 285,285 295,285" fill="#F97316"/>
+  <!-- Pin 4 - Chennai -->
+  <circle cx="310" cy="200" r="13" fill="#0891B2"/>
+  <text x="304" y="205" font-family="Arial" font-size="9" font-weight="800" fill="white">SR</text>
+  <polygon points="310,213 305,223 315,223" fill="#0891B2"/>
+  <!-- Pin 5 -->
+  <circle cx="224" cy="148" r="12" fill="#DC2626"/>
+  <text x="218" y="153" font-family="Arial" font-size="9" font-weight="800" fill="white">AD</text>
+  <!-- Map controls -->
+  <rect x="348" y="72" width="28" height="28" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="357" y="91" font-family="Arial" font-size="14" fill="#475569">+</text>
+  <rect x="348" y="106" width="28" height="28" rx="6" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="357" y="125" font-family="Arial" font-size="14" fill="#475569">−</text>
+  <!-- Legend -->
+  <rect x="24" y="306" width="120" height="30" rx="6" fill="white" opacity="0.9"/>
+  <circle cx="38" cy="321" r="4" fill="#10B981"/>
+  <text x="46" y="325" font-family="Arial" font-size="9" fill="#475569">In Zone</text>
+  <circle cx="90" cy="321" r="4" fill="#F97316"/>
+  <text x="98" y="325" font-family="Arial" font-size="9" fill="#475569">Field</text>
+  <!-- Right panel -->
+  <rect x="396" y="64" width="188" height="260" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="414" y="88" font-family="Arial" font-size="11" font-weight="700" fill="#1E293B">Live Employees</text>
+  <!-- Employee rows -->
+  <rect x="406" y="98" width="168" height="44" rx="8" fill="#F8FAFC"/>
+  <circle cx="424" cy="120" r="12" fill="#7C3AED"/>
+  <text x="418" y="124" font-family="Arial" font-size="8" font-weight="700" fill="white">PS</text>
+  <text x="442" y="115" font-family="Arial" font-size="10" font-weight="700" fill="#1E293B">Priya Sharma</text>
+  <text x="442" y="127" font-family="Arial" font-size="9" fill="#64748B">📍 Andheri, Mumbai</text>
+  <circle cx="558" cy="116" r="5" fill="#10B981"/>
+  <text x="566" y="130" font-family="Arial" font-size="8" fill="#059669" font-weight="700">✓ Zone</text>
+  <circle cx="424" cy="162" r="12" fill="#059669"/>
+  <text x="418" y="166" font-family="Arial" font-size="8" font-weight="700" fill="white">RM</text>
+  <text x="442" y="157" font-family="Arial" font-size="10" font-weight="700" fill="#1E293B">Rahul Mehta</text>
+  <text x="442" y="169" font-family="Arial" font-size="9" fill="#64748B">📍 CP, Delhi</text>
+  <rect x="556" y="153" width="30" height="14" rx="4" fill="#FFF7ED"/>
+  <text x="561" y="164" font-family="Arial" font-size="8" fill="#EA580C" font-weight="700">Field</text>
+  <circle cx="424" cy="204" r="12" fill="#F97316"/>
+  <text x="418" y="208" font-family="Arial" font-size="8" font-weight="700" fill="white">SP</text>
+  <text x="442" y="199" font-family="Arial" font-size="10" font-weight="700" fill="#1E293B">Sneha Patel</text>
+  <text x="442" y="211" font-family="Arial" font-size="9" fill="#64748B">📍 Koramangala</text>
+  <rect x="556" y="195" width="30" height="14" rx="4" fill="#FFF7ED"/>
+  <text x="561" y="206" font-family="Arial" font-size="8" fill="#EA580C" font-weight="700">Field</text>
+  <circle cx="424" cy="246" r="12" fill="#0891B2"/>
+  <text x="418" y="250" font-family="Arial" font-size="8" font-weight="700" fill="white">SR</text>
+  <text x="442" y="241" font-family="Arial" font-size="10" font-weight="700" fill="#1E293B">Sunita Rao</text>
+  <text x="442" y="253" font-family="Arial" font-size="9" fill="#64748B">📍 Anna Nagar</text>
+  <circle cx="558" cy="242" r="5" fill="#10B981"/>
+  <text x="566" y="256" font-family="Arial" font-size="8" fill="#059669" font-weight="700">✓ Zone</text>
+  <circle cx="424" cy="288" r="12" fill="#DC2626"/>
+  <text x="418" y="292" font-family="Arial" font-size="8" font-weight="700" fill="white">AD</text>
+  <text x="442" y="283" font-family="Arial" font-size="10" font-weight="700" fill="#1E293B">Anita Desai</text>
+  <text x="442" y="295" font-family="Arial" font-size="9" fill="#64748B">📍 Lower Parel</text>
+  <circle cx="558" cy="284" r="5" fill="#10B981"/>
+  <text x="566" y="298" font-family="Arial" font-size="8" fill="#059669" font-weight="700">✓ Zone</text>
+  <!-- Bottom: Selfie Attendance -->
+  <rect x="16" y="336" width="568" height="52" rx="12" fill="#0F172A"/>
+  <text x="36" y="358" font-family="Arial" font-size="11" font-weight="700" fill="white">📸 Selfie Attendance</text>
+  <text x="36" y="374" font-family="Arial" font-size="9" fill="#64748B">AI face verification enabled · 5 selfies received today</text>
+  <rect x="340" y="344" width="220" height="36" rx="8" fill="#2563EB" opacity="0.15"/>
+  <circle cx="364" cy="362" r="10" fill="#2563EB"/>
+  <text x="358" y="366" font-family="Arial" font-size="9" fill="white">📷</text>
+  <text x="382" y="358" font-family="Arial" font-size="10" fill="white" font-weight="700">Face Verified</text>
+  <text x="382" y="370" font-family="Arial" font-size="9" fill="#64748B">98.6% accuracy</text>
+  <circle cx="464" cy="362" r="10" fill="#10B981"/>
+  <text x="458" y="366" font-family="Arial" font-size="9" fill="white">✓</text>
+  <text x="480" y="358" font-family="Arial" font-size="10" fill="white" font-weight="700">Geo-fence OK</text>
+  <text x="480" y="370" font-family="Arial" font-size="9" fill="#64748B">Within 500m</text>
+</svg>

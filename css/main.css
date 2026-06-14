@@ -1535,6 +1535,36 @@ img { max-width: 100%; }
   color: #15803d !important;
 }
 
+/* Leave Management specific theme styling - matches mockup with grey unselected items and green active items */
+.nav-dropdown-toggle-leave {
+  transition: var(--transition) !important;
+}
+#leave-management-submenu .sub-item {
+  color: #475569 !important; /* Dark grey text for unselected sub-items */
+}
+#leave-management-submenu .sub-item svg {
+  color: #94a3b8 !important; /* Grey icon for unselected sub-items */
+  width: 11px !important;
+  height: 11px !important;
+  transition: var(--transition) !important;
+}
+#leave-management-submenu .sub-item:hover {
+  background: rgba(22, 163, 74, 0.06) !important; /* Green hover background */
+  color: #15803d !important;
+}
+#leave-management-submenu .sub-item:hover svg {
+  color: #15803d !important;
+}
+#leave-management-submenu .sub-item.active {
+  background: rgba(22, 163, 74, 0.12) !important;
+  color: #15803d !important; /* Green text for active sub-item */
+  border-left: 3px solid #16a34a !important;
+}
+#leave-management-submenu .sub-item.active svg {
+  color: #15803d !important; /* Green icon for active sub-item */
+}
+
+
 /* Custom scrollbar for sidebar */
 .sidebar::-webkit-scrollbar {
   width: 6px;

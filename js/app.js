@@ -165,6 +165,23 @@ function togglePayrollMgmtNavDropdown(event) {
   }
 }
 
+function toggleLeaveNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('leave-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-leave');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -181,7 +198,7 @@ function navigate(module) {
         parentSubMenu.style.display = 'flex';
         const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
         if (wrapper) {
-          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor, .nav-dropdown-toggle-project, .nav-dropdown-toggle-payroll-mgmt');
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor, .nav-dropdown-toggle-project, .nav-dropdown-toggle-payroll-mgmt, .nav-dropdown-toggle-leave');
           const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
           if (toggle && chevron) {
             chevron.style.transform = 'rotate(180deg)';
@@ -196,6 +213,10 @@ function navigate(module) {
   const labels = {
     dashboard: 'Dashboard', employees: 'Employee Management',
     attendance: 'Attendance Management', leaves: 'Leave Management',
+    'leave-types': 'Leave Types',
+    'leave-request': 'Leave Request',
+    'leave-time-request': 'Time Leave Request',
+    'leave-approval': 'Leave Approval',
     payroll: 'Payroll Processing', tasks: 'Task Management',
     tracking: 'Workforce Tracking', gps: 'GPS Attendance',
     reports: 'Reports & Analytics', selfservice: 'Self Service Portal',
@@ -235,6 +256,10 @@ function navigate(module) {
     employees: renderEmployees,
     attendance: renderAttendance,
     leaves: renderLeaves,
+    'leave-types': renderLeaveTypes,
+    'leave-request': renderLeaveRequest,
+    'leave-time-request': renderTimeLeaveRequest,
+    'leave-approval': renderLeaveApproval,
     payroll: renderPayroll,
     tasks: renderTasks,
     tracking: renderTracking,

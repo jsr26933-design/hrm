@@ -46,13 +46,44 @@ function handleLogout() {
 }
 
 // ── Navigation ────────────────────────────────────────────────────────────────
+function toggleNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('company-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
   // Update nav items
   document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
   const activeNav = document.querySelector(`.nav-item[onclick="navigate('${module}')"]`);
-  if (activeNav) activeNav.classList.add('active');
+  if (activeNav) {
+    activeNav.classList.add('active');
+    
+    // Auto-expand parent dropdown if it is a sub-item
+    if (activeNav.classList.contains('sub-item')) {
+      const subMenu = document.getElementById('company-management-submenu');
+      const toggle = document.querySelector('.nav-dropdown-toggle');
+      const chevron = toggle.querySelector('.chevron-icon');
+      if (subMenu && toggle && chevron) {
+        subMenu.style.display = 'flex';
+        chevron.style.transform = 'rotate(180deg)';
+        toggle.classList.add('dropdown-open');
+      }
+    }
+  }
 
   // Update breadcrumb
   const labels = {
@@ -64,7 +95,10 @@ function navigate(module) {
     rbac: 'Roles & Access Control', settings: 'Settings',
     hrcalendar: 'HR Calendar', recruitment: 'Recruitment',
     onboarding: 'Setup Wizard', appraisal: 'Performance Appraisal',
-    assets: 'Asset Management', helpdesk: 'Help Desk & Announcements'
+    assets: 'Asset Management', helpdesk: 'Help Desk & Announcements',
+    company: 'Company Profile', branch: 'Branch Management',
+    department: 'Department Management', 'machine-master': 'Machine Master',
+    post: 'Designation & Post'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -90,7 +124,12 @@ function navigate(module) {
     onboarding: renderOnboardingWizard,
     appraisal: renderAppraisal,
     assets: renderAssets,
-    helpdesk: renderHelpDesk
+    helpdesk: renderHelpDesk,
+    company: renderCompany,
+    branch: renderBranch,
+    department: renderDepartment,
+    'machine-master': renderMachineMaster,
+    post: renderPost
   };
 
   if (renderers[module]) renderers[module](content);

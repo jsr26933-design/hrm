@@ -1357,6 +1357,31 @@ img { max-width: 100%; }
   background: #fef2f2 !important;
 }
 
+/* Sidebar submenu dropdown styles */
+.nav-dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.nav-dropdown-items {
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-item.sub-item {
+  padding-left: 32px !important;
+  font-size: 13px !important;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+}
+.nav-item.sub-item svg {
+  width: 8px !important;
+  height: 8px !important;
+  color: #64748b !important;
+}
+.nav-item.sub-item.active svg {
+  color: var(--brand-orange) !important;
+}
+
 /* Custom scrollbar for sidebar */
 .sidebar::-webkit-scrollbar {
   width: 6px;

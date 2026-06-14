@@ -221,7 +221,8 @@ function navigate(module) {
     'advance-salary': 'Advance Salary Request',
     'employee-salary': 'Employee Salary Setup',
     'tax-report': 'Tax & TDS Reports',
-    tada: 'TA/DA Expenses'
+    tada: 'TA/DA Expenses',
+    notice: 'Notice Board'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -271,7 +272,8 @@ function navigate(module) {
     'advance-salary': renderAdvanceSalary,
     'employee-salary': renderEmployeeSalary,
     'tax-report': renderTaxReport,
-    tada: renderTada
+    tada: renderTada,
+    notice: renderNotice
   };
 
   if (renderers[module]) renderers[module](content);

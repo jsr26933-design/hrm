@@ -148,6 +148,23 @@ function toggleProjectNavDropdown(event) {
   }
 }
 
+function togglePayrollMgmtNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('payroll-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-payroll-mgmt');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -164,7 +181,7 @@ function navigate(module) {
         parentSubMenu.style.display = 'flex';
         const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
         if (wrapper) {
-          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor, .nav-dropdown-toggle-project');
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance, .nav-dropdown-toggle-supervisor, .nav-dropdown-toggle-project, .nav-dropdown-toggle-payroll-mgmt');
           const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
           if (toggle && chevron) {
             chevron.style.transform = 'rotate(180deg)';
@@ -199,7 +216,12 @@ function navigate(module) {
     'supervisor-payroll-columns': 'Supervisor Payroll Columns',
     'supervisor-credit-rules': 'Supervisor Credit Rules',
     projects: 'Project Management',
-    clients: 'Client Management'
+    clients: 'Client Management',
+    'payroll-settings': 'Payroll Settings',
+    'advance-salary': 'Advance Salary Request',
+    'employee-salary': 'Employee Salary Setup',
+    'tax-report': 'Tax & TDS Reports',
+    tada: 'TA/DA Expenses'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -244,7 +266,12 @@ function navigate(module) {
     'supervisor-payroll-columns': renderSupervisorPayrollColumns,
     'supervisor-credit-rules': renderSupervisorCreditRules,
     projects: renderProjects,
-    clients: renderClients
+    clients: renderClients,
+    'payroll-settings': renderPayrollSettings,
+    'advance-salary': renderAdvanceSalary,
+    'employee-salary': renderEmployeeSalary,
+    'tax-report': renderTaxReport,
+    tada: renderTada
   };
 
   if (renderers[module]) renderers[module](content);

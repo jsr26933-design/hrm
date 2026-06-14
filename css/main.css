@@ -1506,6 +1506,35 @@ img { max-width: 100%; }
   color: #15803d !important;
 }
 
+/* Payroll Management specific green theme styling */
+.nav-dropdown-toggle-payroll-mgmt {
+  color: #16a34a !important; /* Green text */
+}
+.nav-dropdown-toggle-payroll-mgmt svg {
+  color: #16a34a !important; /* Green icon */
+}
+#payroll-management-submenu .sub-item {
+  color: #16a34a !important; /* Green text for sub-items */
+}
+#payroll-management-submenu .sub-item svg {
+  color: #16a34a !important; /* Green icon for sub-items */
+}
+#payroll-management-submenu .sub-item:hover {
+  background: rgba(22, 163, 74, 0.06) !important; /* Green hover background */
+  color: #15803d !important;
+}
+#payroll-management-submenu .sub-item:hover svg {
+  color: #15803d !important;
+}
+#payroll-management-submenu .sub-item.active {
+  background: rgba(22, 163, 74, 0.12) !important;
+  color: #15803d !important;
+  border-left: 3px solid #16a34a !important;
+}
+#payroll-management-submenu .sub-item.active svg {
+  color: #15803d !important;
+}
+
 /* Custom scrollbar for sidebar */
 .sidebar::-webkit-scrollbar {
   width: 6px;

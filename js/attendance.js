@@ -247,3 +247,395 @@ function initAttTrendChart() {
     }
   });
 }
+
+// ── Attendance Logs Renderer ──
+function renderAttendanceLogs(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Attendance Logs</h1>
+        <p>Audit and search check-in and check-out logs for all employees.</p>
+      </div>
+      <div class="page-header-right">
+        <button class="btn btn-secondary" onclick="showToast('Exporting attendance logs...')">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export CSV
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter toolbar -->
+    <div class="card" style="margin-bottom:24px; padding:16px;">
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <div style="flex:1; min-width:200px;">
+          <label style="font-size:12px; font-weight:600; color:var(--gray-500); display:block; margin-bottom:6px;">Search Employee</label>
+          <input type="text" class="form-control" placeholder="Search by name or ID..." style="height:38px;"/>
+        </div>
+        <div style="width:180px;">
+          <label style="font-size:12px; font-weight:600; color:var(--gray-500); display:block; margin-bottom:6px;">Date</label>
+          <input type="date" class="form-control" value="2026-06-14" style="height:38px;"/>
+        </div>
+        <div style="width:160px;">
+          <label style="font-size:12px; font-weight:600; color:var(--gray-500); display:block; margin-bottom:6px;">Status</label>
+          <select class="form-control" style="height:38px;">
+            <option>All Statuses</option>
+            <option>Present</option>
+            <option>Absent</option>
+            <option>Late</option>
+            <option>Half Day</option>
+          </select>
+        </div>
+        <div style="width:160px;">
+          <label style="font-size:12px; font-weight:600; color:var(--gray-500); display:block; margin-bottom:6px;">Sync Status</label>
+          <select class="form-control" style="height:38px;">
+            <option>All Syncs</option>
+            <option>Synced</option>
+            <option>Pending</option>
+            <option>Failed</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logs Table -->
+    <div class="table-container">
+      <table class="data-table table-modern">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Check-in Details</th>
+            <th>Check-out Details</th>
+            <th>Total Hours</th>
+            <th>Device/Source</th>
+            <th>Sync Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="emp-cell">
+                <div class="emp-avatar" style="background:#3B82F6">AK</div>
+                <div>
+                  <div class="emp-name">Arjun Kumar</div>
+                  <div class="emp-id">WP-001</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div><strong>09:02 AM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Mumbai HO (Geofence In)</div>
+            </td>
+            <td>
+              <div><strong>06:15 PM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Mumbai HO (Geofence Out)</div>
+            </td>
+            <td><span style="font-weight:600">9.2 hrs</span></td>
+            <td><span class="badge" style="background:#f1f5f9; color:#475569; padding: 2px 8px; border-radius: 4px; font-size: 11px;">iOS App (Face ID)</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Synced</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="emp-cell">
+                <div class="emp-avatar" style="background:#10B981">SS</div>
+                <div>
+                  <div class="emp-name">Smriti Sharma</div>
+                  <div class="emp-id">WP-004</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div><strong>09:15 AM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Mumbai HO (Geofence In)</div>
+            </td>
+            <td>
+              <div><strong>06:00 PM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Mumbai HO (Geofence Out)</div>
+            </td>
+            <td><span style="font-weight:600">8.75 hrs</span></td>
+            <td><span class="badge" style="background:#f1f5f9; color:#475569; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Android App (Fingerprint)</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Synced</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="emp-cell">
+                <div class="emp-avatar" style="background:#F59E0B">YK</div>
+                <div>
+                  <div class="emp-name">Yogesh Kumar</div>
+                  <div class="emp-id">WP-008</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div><strong>09:45 AM</strong> <span style="color:var(--warning); font-size:11px; font-weight:600;">(Late)</span></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Pune Office (Geofence In)</div>
+            </td>
+            <td>
+              <div><strong>06:30 PM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Pune Office (Geofence Out)</div>
+            </td>
+            <td><span style="font-weight:600">8.75 hrs</span></td>
+            <td><span class="badge" style="background:#f1f5f9; color:#475569; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Biometric Reader</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Synced</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="emp-cell">
+                <div class="emp-avatar" style="background:#8B5CF6">RD</div>
+                <div>
+                  <div class="emp-name">Rupali Das</div>
+                  <div class="emp-id">WP-012</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div><strong>09:05 AM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Pune Office (Geofence In)</div>
+            </td>
+            <td>
+              <div><strong>05:45 PM</strong></div>
+              <div style="font-size:11px; color:var(--gray-400)">📍 Pune Office (Geofence Out)</div>
+            </td>
+            <td><span style="font-weight:600">8.6 hrs</span></td>
+            <td><span class="badge" style="background:#f1f5f9; color:#475569; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Web Portal</span></td>
+            <td><span class="badge badge-warning" style="background: rgba(245,158,11,0.1); color: #d97706; padding: 2px 8px; border-radius: 4px; font-size: 11px;">Pending</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+// ── Attendance Report Renderer ──
+function renderAttendanceReport(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Attendance Analytics & Report</h1>
+        <p>Analyze company-wide attendance rates, top late-comers, and absent trends.</p>
+      </div>
+      <div class="page-header-right">
+        <button class="btn btn-primary" onclick="showToast('Downloading monthly attendance PDF report...')">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF Report
+        </button>
+      </div>
+    </div>
+
+    <!-- Stats summary grid -->
+    <div class="grid grid-4" style="margin-bottom:24px">
+      <div class="stat-card">
+        <div class="stat-icon blue">📈</div>
+        <div class="stat-body">
+          <div class="stat-label">Avg Presence Rate</div>
+          <div class="stat-value">94.2%</div>
+          <div class="stat-change up"><span>+1.5% this month</span></div>
+        </div>
+      </div>
+      <div class="stat-card success">
+        <div class="stat-icon green">⏱️</div>
+        <div class="stat-body">
+          <div class="stat-label">Avg Clock-in Time</div>
+          <div class="stat-value">9:12 AM</div>
+          <div class="stat-change up"><span>5 mins earlier</span></div>
+        </div>
+      </div>
+      <div class="stat-card warning">
+        <div class="stat-icon yellow">⚠️</div>
+        <div class="stat-body">
+          <div class="stat-label">Late Clock-ins</div>
+          <div class="stat-value">4.8%</div>
+          <div class="stat-change down"><span>-0.8% decrease</span></div>
+        </div>
+      </div>
+      <div class="stat-card danger">
+        <div class="stat-icon red">❌</div>
+        <div class="stat-body">
+          <div class="stat-label">Unexcused Absences</div>
+          <div class="stat-value">0.6%</div>
+          <div class="stat-change"><span>Stable trend</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="margin-bottom:24px; gap:20px;">
+      <!-- Attendance Statistics -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Presence by Department</div>
+        </div>
+        <div class="card-body">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600; margin-bottom:4px;">
+                <span>Operations</span>
+                <span>96.8%</span>
+              </div>
+              <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:96.8%; background:#10B981; border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600; margin-bottom:4px;">
+                <span>Engineering</span>
+                <span>94.5%</span>
+              </div>
+              <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:94.5%; background:#3B82F6; border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600; margin-bottom:4px;">
+                <span>Human Resources</span>
+                <span>95.0%</span>
+              </div>
+              <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:95%; background:#8B5CF6; border-radius:4px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600; margin-bottom:4px;">
+                <span>Sales & Marketing</span>
+                <span>91.2%</span>
+              </div>
+              <div style="height:8px; background:#f1f5f9; border-radius:4px; overflow:hidden;">
+                <div style="height:100%; width:91.2%; background:#F59E0B; border-radius:4px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick regularization list -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Pending Regularizations</div>
+        </div>
+        <div class="card-body" style="padding:0;">
+          <table class="data-table" style="font-size:13px;">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Missed Punch Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Amit Singh</strong></td>
+                <td>12 Jun 2026</td>
+                <td><button class="btn btn-secondary btn-sm" onclick="showToast('Approved regularization')">Approve</button></td>
+              </tr>
+              <tr>
+                <td><strong>Rahul Verma</strong></td>
+                <td>11 Jun 2026</td>
+                <td><button class="btn btn-secondary btn-sm" onclick="showToast('Approved regularization')">Approve</button></td>
+              </tr>
+              <tr>
+                <td><strong>Sanjana Rao</strong></td>
+                <td>10 Jun 2026</td>
+                <td><button class="btn btn-secondary btn-sm" onclick="showToast('Approved regularization')">Approve</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ── Daily Credit Summary Renderer ──
+function renderDailyCreditSummary(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Daily Attendance Credit Summary</h1>
+        <p>Review standard shift durations, total hours clocked, and overtime/deficit credits.</p>
+      </div>
+      <div class="page-header-right">
+        <button class="btn btn-primary" onclick="showToast('Syncing all credits with Payroll...')">
+          🔄 Sync with Payroll
+        </button>
+      </div>
+    </div>
+
+    <!-- Summary KPI cards -->
+    <div class="grid grid-3" style="margin-bottom:24px">
+      <div class="stat-card-blue">
+        <div class="grad-stat-icon">🕒</div>
+        <div class="grad-stat-label">Total Clocked Hours</div>
+        <div class="grad-stat-value">1,984 Hours</div>
+        <div class="grad-stat-badge">Company-wide today</div>
+      </div>
+      <div class="stat-card-green">
+        <div class="grad-stat-icon">📈</div>
+        <div class="grad-stat-label">Overtime Credits</div>
+        <div class="grad-stat-value">+64.5 Hours</div>
+        <div class="grad-stat-badge">Extra worked hours approved</div>
+      </div>
+      <div class="stat-card-orange">
+        <div class="grad-stat-icon">📉</div>
+        <div class="grad-stat-label">Deficit Hours</div>
+        <div class="grad-stat-value">-12.0 Hours</div>
+        <div class="grad-stat-badge">Shortfall hours flagged</div>
+      </div>
+    </div>
+
+    <!-- Credits Table -->
+    <div class="table-container">
+      <table class="data-table table-modern">
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+            <th>Shift Type</th>
+            <th>Standard Hours</th>
+            <th>Clocked Hours</th>
+            <th>Credit Hours (OT)</th>
+            <th>Shift Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Arjun Kumar</strong></td>
+            <td>General Shift (09:00 - 18:00)</td>
+            <td>8.0 hrs</td>
+            <td>9.2 hrs</td>
+            <td><span style="color:#10B981; font-weight:700;">+1.2 hrs</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Completed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Smriti Sharma</strong></td>
+            <td>General Shift (09:00 - 18:00)</td>
+            <td>8.0 hrs</td>
+            <td>8.75 hrs</td>
+            <td><span style="color:#10B981; font-weight:700;">+0.75 hrs</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Completed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Yogesh Kumar</strong></td>
+            <td>General Shift (09:00 - 18:00)</td>
+            <td>8.0 hrs</td>
+            <td>8.75 hrs</td>
+            <td><span style="color:#10B981; font-weight:700;">+0.75 hrs</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Completed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Rupali Das</strong></td>
+            <td>General Shift (09:00 - 18:00)</td>
+            <td>8.0 hrs</td>
+            <td>8.6 hrs</td>
+            <td><span style="color:#10B981; font-weight:700;">+0.6 hrs</span></td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Completed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Amit Singh</strong></td>
+            <td>General Shift (09:00 - 18:00)</td>
+            <td>8.0 hrs</td>
+            <td>6.5 hrs</td>
+            <td><span style="color:#EF4444; font-weight:700;">-1.5 hrs</span></td>
+            <td><span class="badge badge-warning" style="background: rgba(245,158,11,0.1); color: #d97706; padding: 2px 8px; border-radius: 4px; font-size:11px;">Short Hours</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}

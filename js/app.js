@@ -97,6 +97,23 @@ function toggleEmployeeNavDropdown(event) {
   }
 }
 
+function toggleAttendanceNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('attendance-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-attendance');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -113,7 +130,7 @@ function navigate(module) {
         parentSubMenu.style.display = 'flex';
         const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
         if (wrapper) {
-          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee');
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user, .nav-dropdown-toggle-employee, .nav-dropdown-toggle-attendance');
           const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
           if (toggle && chevron) {
             chevron.style.transform = 'rotate(180deg)';
@@ -139,7 +156,9 @@ function navigate(module) {
     department: 'Department Management', 'machine-master': 'Machine Master',
     post: 'Designation & Post', users: 'User Account Management',
     'face-profiles': 'Face Profiles', 'location-logs': 'Location Logs',
-    'logout-requests': 'Logout Requests'
+    'logout-requests': 'Logout Requests',
+    'attendance-logs': 'Attendance Logs', 'attendance-report': 'Attendance Report',
+    'daily-credit-summary': 'Daily Credit Summary'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -174,7 +193,10 @@ function navigate(module) {
     users: renderUsers,
     'face-profiles': renderFaceProfiles,
     'location-logs': renderLocationLogs,
-    'logout-requests': renderLogoutRequests
+    'logout-requests': renderLogoutRequests,
+    'attendance-logs': renderAttendanceLogs,
+    'attendance-report': renderAttendanceReport,
+    'daily-credit-summary': renderDailyCreditSummary
   };
 
   if (renderers[module]) renderers[module](content);

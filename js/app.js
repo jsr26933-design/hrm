@@ -63,6 +63,23 @@ function toggleNavDropdown(event) {
   }
 }
 
+function toggleUserNavDropdown(event) {
+  if (event) event.preventDefault();
+  const subMenu = document.getElementById('user-management-submenu');
+  const toggle = document.querySelector('.nav-dropdown-toggle-user');
+  const chevron = toggle.querySelector('.chevron-icon');
+  
+  if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+    subMenu.style.display = 'flex';
+    chevron.style.transform = 'rotate(180deg)';
+    toggle.classList.add('dropdown-open');
+  } else {
+    subMenu.style.display = 'none';
+    chevron.style.transform = 'rotate(0deg)';
+    toggle.classList.remove('dropdown-open');
+  }
+}
+
 function navigate(module) {
   currentModule = module;
 
@@ -74,13 +91,18 @@ function navigate(module) {
     
     // Auto-expand parent dropdown if it is a sub-item
     if (activeNav.classList.contains('sub-item')) {
-      const subMenu = document.getElementById('company-management-submenu');
-      const toggle = document.querySelector('.nav-dropdown-toggle');
-      const chevron = toggle.querySelector('.chevron-icon');
-      if (subMenu && toggle && chevron) {
-        subMenu.style.display = 'flex';
-        chevron.style.transform = 'rotate(180deg)';
-        toggle.classList.add('dropdown-open');
+      const parentSubMenu = activeNav.closest('.nav-dropdown-items');
+      if (parentSubMenu) {
+        parentSubMenu.style.display = 'flex';
+        const wrapper = parentSubMenu.closest('.nav-dropdown-wrapper');
+        if (wrapper) {
+          const toggle = wrapper.querySelector('.nav-dropdown-toggle, .nav-dropdown-toggle-user');
+          const chevron = toggle ? toggle.querySelector('.chevron-icon') : null;
+          if (toggle && chevron) {
+            chevron.style.transform = 'rotate(180deg)';
+            toggle.classList.add('dropdown-open');
+          }
+        }
       }
     }
   }
@@ -98,7 +120,7 @@ function navigate(module) {
     assets: 'Asset Management', helpdesk: 'Help Desk & Announcements',
     company: 'Company Profile', branch: 'Branch Management',
     department: 'Department Management', 'machine-master': 'Machine Master',
-    post: 'Designation & Post'
+    post: 'Designation & Post', users: 'User Account Management'
   };
   document.getElementById('breadcrumb').textContent = labels[module] || module;
 
@@ -129,7 +151,8 @@ function navigate(module) {
     branch: renderBranch,
     department: renderDepartment,
     'machine-master': renderMachineMaster,
-    post: renderPost
+    post: renderPost,
+    users: renderUsers
   };
 
   if (renderers[module]) renderers[module](content);

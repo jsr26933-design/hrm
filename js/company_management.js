@@ -468,5 +468,97 @@ function renderPost(container) {
         </tbody>
       </table>
     </div>
+}
+
+// 6. User Management / Users Renderer
+function renderUsers(container) {
+  container.innerHTML = `
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>User Management</h1>
+        <p>Assign portal access roles, manage login credentials, and audit security permissions.</p>
+      </div>
+      <div class="page-header-right">
+        <button class="btn btn-primary" onclick="showToast('Create User feature coming soon!')">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Create New User
+        </button>
+      </div>
+    </div>
+
+    <!-- KPI summary row -->
+    <div class="grid grid-3" style="margin-bottom:24px">
+      <div class="stat-card-blue">
+        <div class="grad-stat-icon">👤</div>
+        <div class="grad-stat-label">Total Portal Users</div>
+        <div class="grad-stat-value">12 Active Users</div>
+        <div class="grad-stat-badge">Across all management roles</div>
+      </div>
+      <div class="stat-card-green">
+        <div class="grad-stat-icon">🛡️</div>
+        <div class="grad-stat-label">System Admins</div>
+        <div class="grad-stat-value">2 Super Admins</div>
+        <div class="grad-stat-badge">Full database write access</div>
+      </div>
+      <div class="stat-card-orange">
+        <div class="grad-stat-icon">⚡</div>
+        <div class="grad-stat-label">Last Active Log</div>
+        <div class="grad-stat-value">Arjun Kumar</div>
+        <div class="grad-stat-badge">Active 10 minutes ago</div>
+      </div>
+    </div>
+
+    <!-- Users List Table -->
+    <div class="table-container">
+      <table class="data-table table-modern">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Email Address</th>
+            <th>System Role</th>
+            <th>Last Login Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Arjun Kumar</strong></td>
+            <td>arjun@company.com</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Super Admin</span></td>
+            <td>14 Jun 2026, 17:45</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>Smriti Sharma</strong></td>
+            <td>smriti@company.com</td>
+            <td><span class="badge badge-info" style="background: rgba(37,99,235,0.1); color: #2563eb; padding: 2px 8px; border-radius: 4px; font-size:11px;">HR Manager</span></td>
+            <td>14 Jun 2026, 16:30</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>Yogesh Kumar</strong></td>
+            <td>yogesh@company.com</td>
+            <td><span class="badge badge-secondary" style="background: rgba(100,116,139,0.1); color: #475569; padding: 2px 8px; border-radius: 4px; font-size:11px;">Department Head</span></td>
+            <td>14 Jun 2026, 15:10</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>Rupali Das</strong></td>
+            <td>rupali@company.com</td>
+            <td><span class="badge badge-secondary" style="background: rgba(100,116,139,0.1); color: #475569; padding: 2px 8px; border-radius: 4px; font-size:11px;">Department Head</span></td>
+            <td>14 Jun 2026, 11:20</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>Debraj Paul</strong></td>
+            <td>debraj@company.com</td>
+            <td><span class="badge badge-info" style="background: rgba(37,99,235,0.1); color: #2563eb; padding: 2px 8px; border-radius: 4px; font-size:11px;">Billing Admin</span></td>
+            <td>13 Jun 2026, 18:05</td>
+            <td><span class="badge badge-success" style="background: rgba(16,185,129,0.1); color: #059669; padding: 2px 8px; border-radius: 4px; font-size:11px;">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   `;
 }
+

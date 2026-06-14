@@ -44,10 +44,34 @@ ul{list-style:none;}
   max-width:1180px;margin:0 auto;padding:0 24px;
   height:66px;display:flex;align-items:center;gap:28px;
 }
-.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.logo-text{}
-.logo-main{font-size:32px;font-weight:700;color:var(--navy);display:block;letter-spacing:-.3px;}
-.logo-main b{color:var(--blue);}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;text-decoration:none;}
+.brand-logo-icon-svg {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+.brand-logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none !important;
+}
+.brand-logo-pilot {
+  color: #F59E0B;
+}
+.brand-logo-sub {
+  font-size: 10px;
+  font-weight: 700;
+  color: #475569;
+  background: rgba(15, 23, 42, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
 .nav-menu{display:flex;gap:2px;flex:1;}
 .nav-menu a{
   padding:7px 13px;font-size:14px;font-weight:500;color:var(--gray600);

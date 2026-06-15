@@ -7,7 +7,7 @@ function renderDashboard(container) {
   container.innerHTML = `
     <!-- HEADER TITLE -->
     <div class="dash-welcome-header" style="margin-bottom: 24px;">
-      <h2 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; color: #1E293B;">Welcome to Attendance Dashboard : WorkPilot HRM</h2>
+      <h2 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; color: #1E293B;">Welcome to Attendance Dashboard - HisabMitra</h2>
     </div>
 
     <!-- 8 KPI CARDS GRID -->
@@ -18,8 +18,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">TOTAL DEPARTMENTS</span>
           <span class="kpi-card-value" data-count="3">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('department')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
       
@@ -29,8 +29,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">TOTAL EMPLOYEES</span>
           <span class="kpi-card-value" data-count="7">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('employees')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
 
@@ -40,8 +40,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">TOTAL HOLIDAYS</span>
           <span class="kpi-card-value" data-count="0">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12V21M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('hrcalendar')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
 
@@ -51,8 +51,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">PAID LEAVES</span>
           <span class="kpi-card-value" data-count="6">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('leave-types')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
 
@@ -62,8 +62,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">ON LEAVE TODAY</span>
           <span class="kpi-card-value" data-count="0">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('leave-approval')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
 
@@ -73,8 +73,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">PENDING LEAVE REQUESTS</span>
           <span class="kpi-card-value" data-count="0">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('leave-approval')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
 
@@ -84,8 +84,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">TOTAL CHECK IN TODAY</span>
           <span class="kpi-card-value" data-count="0">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('attendance-logs')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
 
@@ -95,8 +95,8 @@ function renderDashboard(container) {
           <span class="kpi-card-label">TOTAL CHECK OUT TODAY</span>
           <span class="kpi-card-value" data-count="0">0</span>
         </div>
-        <div class="kpi-card-icon-wrap">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M19.8 12H9"/></svg>
+        <div class="kpi-card-icon-wrap" onclick="navigate('attendance-logs')" style="cursor: pointer;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
       </div>
     </div>
@@ -119,10 +119,10 @@ function renderDashboard(container) {
         <div class="kpi-card project-card">
           <div class="kpi-card-info">
             <span class="kpi-card-label">TOTAL PROJECTS</span>
-            <span class="kpi-card-value" data-count="12">0</span>
+            <span class="kpi-card-value" data-count="0">0</span>
           </div>
-          <div class="kpi-card-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <div class="kpi-card-icon-wrap" onclick="navigate('projects')" style="cursor: pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
         </div>
         
@@ -130,10 +130,10 @@ function renderDashboard(container) {
         <div class="kpi-card project-card">
           <div class="kpi-card-info">
             <span class="kpi-card-label">PENDING PROJECTS</span>
-            <span class="kpi-card-value" data-count="4">0</span>
+            <span class="kpi-card-value" data-count="0">0</span>
           </div>
-          <div class="kpi-card-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="kpi-card-icon-wrap" onclick="navigate('projects')" style="cursor: pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
         </div>
 
@@ -141,10 +141,10 @@ function renderDashboard(container) {
         <div class="kpi-card project-card">
           <div class="kpi-card-info">
             <span class="kpi-card-label">ON HOLD PROJECTS</span>
-            <span class="kpi-card-value" data-count="2">0</span>
+            <span class="kpi-card-value" data-count="0">0</span>
           </div>
-          <div class="kpi-card-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="10" y1="15" x2="10" y2="9"/><line x1="14" y1="15" x2="14" y2="9"/></svg>
+          <div class="kpi-card-icon-wrap" onclick="navigate('projects')" style="cursor: pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
         </div>
 
@@ -152,10 +152,10 @@ function renderDashboard(container) {
         <div class="kpi-card project-card">
           <div class="kpi-card-info">
             <span class="kpi-card-label">IN PROGRESS PROJECTS</span>
-            <span class="kpi-card-value" data-count="6">0</span>
+            <span class="kpi-card-value" data-count="0">0</span>
           </div>
-          <div class="kpi-card-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <div class="kpi-card-icon-wrap" onclick="navigate('projects')" style="cursor: pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
         </div>
 
@@ -163,10 +163,10 @@ function renderDashboard(container) {
         <div class="kpi-card project-card">
           <div class="kpi-card-info">
             <span class="kpi-card-label">FINISHED PROJECTS</span>
-            <span class="kpi-card-value" data-count="10">0</span>
+            <span class="kpi-card-value" data-count="0">0</span>
           </div>
-          <div class="kpi-card-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="22 4 12 14.01 9 11.01"/><path d="M2 12A10 10 0 0 1 18 3.55"/></svg>
+          <div class="kpi-card-icon-wrap" onclick="navigate('projects')" style="cursor: pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
         </div>
 
@@ -174,10 +174,10 @@ function renderDashboard(container) {
         <div class="kpi-card project-card">
           <div class="kpi-card-info">
             <span class="kpi-card-label">CANCELLED PROJECTS</span>
-            <span class="kpi-card-value" data-count="1">0</span>
+            <span class="kpi-card-value" data-count="0">0</span>
           </div>
-          <div class="kpi-card-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <div class="kpi-card-icon-wrap" onclick="navigate('projects')" style="cursor: pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
         </div>
       </div>
@@ -189,36 +189,21 @@ function renderDashboard(container) {
       <div class="bottom-panel-card" style="flex: 1.5; background: white; border-radius: 16px; border: 1px solid #E2E8F0; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);">
         <div class="panel-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #F1F5F9; padding-bottom: 12px;">
           <span style="font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">TOP CLIENTS</span>
-          <a href="#" onclick="showToast('Loading clients database...', 'info')" class="view-all-link" style="font-size: 12px; font-weight: 700; color: #0F2D6B; text-decoration: none;">View All Clients</a>
+          <a href="#" onclick="navigate('clients')" class="view-all-link" style="font-size: 12px; font-weight: 700; color: #0F2D6B; text-decoration: none;">View All Clients</a>
         </div>
         <div class="panel-card-body">
-          <table class="dash-simple-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;">
+          <table class="dash-simple-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px;">
             <thead>
-              <tr style="border-bottom: 1px solid #F1F5F9; color: #94A3B8; font-weight: 600;">
-                <th style="padding: 10px 0;">Client Name</th>
-                <th>Industry</th>
-                <th>Projects</th>
-                <th style="text-align: right;">Status</th>
+              <tr style="border-bottom: 1px solid #F1F5F9; color: #94A3B8; font-weight: 600; text-transform: uppercase;">
+                <th style="padding: 10px 0;">Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th style="text-align: right;">Project</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid #F8FAFC;">
-                <td style="padding: 12px 0; color: #1E293B;"><strong>Acme Corporation</strong></td>
-                <td style="color: #475569;">Technology</td>
-                <td style="color: #475569;">3 Active</td>
-                <td style="text-align: right;"><span class="badge-v2 success" style="background: #ECFDF5; color: #10B981; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;">Active</span></td>
-              </tr>
-              <tr style="border-bottom: 1px solid #F8FAFC;">
-                <td style="padding: 12px 0; color: #1E293B;"><strong>Globex Industries</strong></td>
-                <td style="color: #475569;">Logistics</td>
-                <td style="color: #475569;">2 Active</td>
-                <td style="text-align: right;"><span class="badge-v2 success" style="background: #ECFDF5; color: #10B981; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;">Active</span></td>
-              </tr>
               <tr>
-                <td style="padding: 12px 0; color: #1E293B;"><strong>Initech LLC</strong></td>
-                <td style="color: #475569;">Finance</td>
-                <td style="color: #475569;">1 Active</td>
-                <td style="text-align: right;"><span class="badge-v2 warning" style="background: #FFFBEB; color: #F59E0B; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;">Pending</span></td>
+                <td colspan="4" style="text-align: center; color: #94A3B8; padding: 36px 0; font-weight: 600;">No records found!</td>
               </tr>
             </tbody>
           </table>
@@ -231,24 +216,37 @@ function renderDashboard(container) {
           <span style="font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">TASK DETAILS</span>
         </div>
         <div class="panel-card-body">
-          <div class="dash-task-list" style="display: flex; flex-direction: column; gap: 12px;">
-            <div class="dash-task-item" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #F8FAFC; border-radius: 12px; font-size: 13px;">
-              <span class="task-prio priority-high" style="background: #FEF2F2; color: #EF4444; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700;">Urgent</span>
-              <span class="task-name" style="flex: 1; margin: 0 12px; font-weight: 600; color: #334155; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Complete Q3 Appraisals</span>
-              <span class="task-date" style="color: #94A3B8; font-size: 11.5px; font-weight: 500;">Jun 20</span>
-            </div>
-            <div class="dash-task-item" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #F8FAFC; border-radius: 12px; font-size: 13px;">
-              <span class="task-prio priority-medium" style="background: #EFF6FF; color: #2563EB; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700;">Medium</span>
-              <span class="task-name" style="flex: 1; margin: 0 12px; font-weight: 600; color: #334155; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Process June Payroll</span>
-              <span class="task-date" style="color: #94A3B8; font-size: 11.5px; font-weight: 500;">Jun 28</span>
-            </div>
-            <div class="dash-task-item" style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #F8FAFC; border-radius: 12px; font-size: 13px;">
-              <span class="task-prio priority-low" style="background: #F1F5F9; color: #64748B; padding: 2px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 700;">Low</span>
-              <span class="task-name" style="flex: 1; margin: 0 12px; font-weight: 600; color: #334155; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Review Attendance Policy</span>
-              <span class="task-date" style="color: #94A3B8; font-size: 11.5px; font-weight: 500;">Jun 30</span>
-            </div>
+          <div class="chart-wrap-v2" style="height: 250px; position: relative;">
+            <canvas id="dashTasksDetailChart"></canvas>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- RECENT PROJECTS SECTION -->
+    <div class="bottom-panel-card" style="margin-top: 30px; background: white; border-radius: 16px; border: 1px solid #E2E8F0; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);">
+      <div class="panel-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #F1F5F9; padding-bottom: 12px;">
+        <span style="font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">RECENT PROJECTS</span>
+        <a href="#" onclick="navigate('projects')" class="view-all-link" style="font-size: 12px; font-weight: 700; color: #0F2D6B; text-decoration: none;">View All Projects</a>
+      </div>
+      <div class="panel-card-body">
+        <table class="dash-simple-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px;">
+          <thead>
+            <tr style="border-bottom: 1px solid #F1F5F9; color: #94A3B8; font-weight: 600; text-transform: uppercase;">
+              <th style="padding: 10px 0;">Title</th>
+              <th>Clients</th>
+              <th>Deadline</th>
+              <th>Users</th>
+              <th>Completion</th>
+              <th style="text-align: right;">Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" style="text-align: center; color: #94A3B8; padding: 36px 0; font-weight: 600;">No records found!</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   `;
@@ -290,10 +288,10 @@ function initDashboardCharts() {
   new Chart(pCtx, {
     type: 'bar',
     data: {
-      labels: ['Pending', 'On Hold', 'In Progress', 'Completed', 'Cancelled'],
+      labels: ['Pending', 'On Hold', 'In progress', 'Completed', 'Cancelled'],
       datasets: [{
         label: 'Projects',
-        data: [4, 2, 6, 10, 1],
+        data: [0, 0, 0, 0, 0],
         backgroundColor: 'rgba(16, 185, 129, 0.85)',
         borderColor: '#10B981',
         borderWidth: 1.5,
@@ -314,11 +312,49 @@ function initDashboardCharts() {
         },
         y: {
           min: 0,
-          max: 12,
+          max: 1.0,
           grid: { color: 'rgba(226, 232, 240, 0.5)', drawBorder: false },
-          ticks: { font: { family: 'Inter', size: 11 }, color: '#94A3B8', stepSize: 2 }
+          ticks: { font: { family: 'Inter', size: 11 }, color: '#94A3B8', stepSize: 0.1 }
         }
       }
+    }
+  });
+
+  const tCtx = document.getElementById('dashTasksDetailChart');
+  if (!tCtx) return;
+  
+  const existingTasksChart = Chart.getChart(tCtx);
+  if (existingTasksChart) {
+    existingTasksChart.destroy();
+  }
+
+  new Chart(tCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Pending', 'On Hold', 'In progress', 'Completed', 'Cancelled'],
+      datasets: [{
+        data: [0, 0, 0, 1, 0], // Draw solid completed green ring to match screenshot
+        backgroundColor: ['#3B82F6', '#EF4444', '#6366F1', '#10B981', '#F59E0B'],
+        borderWidth: 2,
+        borderColor: '#ffffff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            usePointStyle: true,
+            boxWidth: 8,
+            padding: 15,
+            font: { family: 'Inter', size: 11, weight: 600 },
+            color: '#64748B'
+          }
+        }
+      },
+      cutout: '75%'
     }
   });
 }
